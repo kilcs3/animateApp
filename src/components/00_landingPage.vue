@@ -32,7 +32,7 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'WelcomeToAnimateApp',
   props: {
     msg: String
   }
@@ -43,6 +43,7 @@ export default {
 <style scoped>
 h3 {
   margin: 40px 0 0;
+  color: #93bc3a;
 }
 ul {
   list-style-type: none;
@@ -53,6 +54,6 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #42b983;
+  color: #004f8c;
 }
 </style>

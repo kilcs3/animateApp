@@ -1,28 +1,29 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <WelcomeToAnimateApp msg="beobachten. vorstellen. besser werden."/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import WelcomeToAnimateApp from './components/00_landingPage.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    WelcomeToAnimateApp
   }
 }
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Montserrat, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #4e4e4e;
   margin-top: 60px;
 }
 </style>
