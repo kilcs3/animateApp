@@ -1,19 +1,24 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <WelcomeToAnimateApp msg="beobachten. vorstellen. besser werden."/>
-  </div>
+  <v-app>
+    <v-main>
+      <router-view/>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import WelcomeToAnimateApp from './components/00_landingPage.vue'
 
 export default {
   name: 'App',
+
   components: {
-    WelcomeToAnimateApp
-  }
-}
+
+  },
+
+  data: () => ({
+    //
+  }),
+};
 </script>
 
 <style>
