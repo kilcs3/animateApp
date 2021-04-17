@@ -9,6 +9,11 @@
 
 export default {
   name: 'LandingPage',
+  methods: {
+    redirect: setTimeout(function(){
+        window.location.href = '#/home';
+      }, 5000)
+  },
   components: {
 
   }

@@ -20,6 +20,7 @@ const theme = {
   light: '#f8f9fa',
   dark: '#343a40',
   section: '#f4f4f4',
+  green: '#93BC3A',
   gray_superdark: '#4E4E4E',
   gray_superlight: '#f4f4f4',
   gray_cookiebar: 'rgba(244,244,244,0.8)',
@@ -27,6 +28,7 @@ const theme = {
 
 export default new Vuetify({
   theme: {
+    options: { customProperties: true },
     themes: {
       dark: theme,
       light: theme,
