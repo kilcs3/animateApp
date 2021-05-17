@@ -1,33 +1,20 @@
 <template>
-  <v-app>
-    <v-app-bar
-        color="green"
-        absolute
-    >
-      <v-img
-          alt="Reha logo"
-          src="../assets/logo.png"
-          max-height="100px"
-          max-width="100px"
-      ></v-img>
-      <v-toolbar-title>&Uuml;bung ausw&auml;hlen</v-toolbar-title>
-    </v-app-bar>
-    <v-main>
-
-
-    </v-main>
-  </v-app>
+  <div>
+    <ul>
+      <li v-for="exercise in shared.exercises" :key="exercise.id"><router-link :to="'/exerciseAO/'+exercise.id">{{exercise.title}}</router-link></li>
+    </ul>
+  </div>
 </template>
 
 <script>
-export default {
-  name: "Home",
-  components: {
+  import store from '@/store';
 
+  export default {
+    name: "Home",
+    data: function(){
+      return {
+        shared: store.state
+      }
+    }
   }
-}
 </script>
-
-<style>
-
-</style>

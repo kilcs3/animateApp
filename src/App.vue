@@ -1,5 +1,16 @@
 <template>
   <v-app>
+    <v-app-bar
+        color="green"
+    >
+      <v-img
+          alt="Reha logo"
+          src="assets/logo_text.png"
+          max-height="100px"
+          max-width="100px"
+      ></v-img>
+      <v-toolbar-title>&Uuml;bung ausw&auml;hlen</v-toolbar-title>
+    </v-app-bar>
     <v-main>
       <router-view/>
     </v-main>
@@ -7,27 +18,11 @@
 </template>
 
 <script>
-
-export default {
-  name: 'App',
-
-  components: {
-
-  },
-
-  data: () => ({
-    //
-  }),
-};
+  export default {
+    name: 'App'
+  };
 </script>
 
-<style>
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-#app {
-  font-family: Montserrat, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #4e4e4e;
-}
+<style scoped>
+  @import 'assets/css/style.css';
 </style>
