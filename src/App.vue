@@ -2,14 +2,19 @@
   <v-app>
     <v-app-bar
         color="green"
+        app
+        height="100px"
     >
       <v-img
           alt="Reha logo"
-          src="assets/images/logo_text.png"
-          max-height="100px"
-          max-width="100px"
+          src="@/assets/images/logo_min.png"
+          class="logo"
+          max-height="80px"
+          max-width="80px"
       ></v-img>
-      <v-toolbar-title>&Uuml;bung ausw&auml;hlen</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-toolbar-title>{{ title }}</v-toolbar-title>
+      <v-spacer></v-spacer>
     </v-app-bar>
     <v-main>
       <router-view/>
@@ -19,7 +24,12 @@
 
 <script>
   export default {
-    name: 'App'
+    name: 'App',
+    data: function() {
+      return {
+        title: "Übung auswählen"
+      }
+    }
   };
 </script>
 

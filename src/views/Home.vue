@@ -1,15 +1,12 @@
 <template>
   <div class="margin">
-    <!--<ul>
-      <li v-for="exercise in shared.exercises" :key="exercise.id"><router-link :to="'/exerciseAO/'+exercise.id">{{exercise.title}}</router-link></li>
-    </ul>-->
     <v-row>
       <v-col
           v-for="exercise in shared.exercises"
           :key="exercise.id"
           class="d-flex child-flex"
           :cols="6"
-          :md="4"
+          :lg="4"
       >
         <router-link :to="'/exerciseAO/'+exercise.id">
           <v-img

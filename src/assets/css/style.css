@@ -11,3 +11,7 @@
 .margin {
     margin: 1em;
 }
+
+.logo {
+    border-radius: 50%;
+}

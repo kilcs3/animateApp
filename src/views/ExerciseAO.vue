@@ -1,6 +1,25 @@
 <template>
   <div>
-    <p>Action observation: <router-link :to="'/exerciseMI/'+exercise.id">{{exercise.title}}</router-link></p>
+    <p>Go to motor imagery: <router-link :to="'/exerciseMI/'+exercise.id">{{exercise.title}}</router-link></p>
+    <v-row>
+      <v-spacer></v-spacer>
+      <v-col
+        :cols="10"
+        :lg="8"
+      >
+        <video
+            :src="exercise.video"
+            :poster="exercise.image"
+            @ended="onEnd"
+            class="grey lighten-2"
+            width="100%"
+            autoplay
+        >
+          Dieses Video kann in Ihrem Browser nicht wiedergegeben werden.<br>
+        </video>
+      </v-col>
+      <v-spacer></v-spacer>
+    </v-row>
   </div>
 </template>
 
@@ -9,6 +28,11 @@
 
   export default {
     name: "ExerciseAO",
+    methods: {
+      onEnd: function(){
+        alert('video ended -> now go to motor imagery');
+      }
+    },
     computed: {
       exercise: function() {
         let exercise = store.getters.exercise(this.$route.params.id);
