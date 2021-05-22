@@ -10,7 +10,7 @@
       >
         <router-link :to="'/exerciseAO/'+exercise.id">
           <v-img
-              :src="exercise.image"
+              :src="getImgUrl(exercise.image)"
               aspect-ratio="1.5"
               class="grey lighten-2"
           >
@@ -29,6 +29,11 @@
     data: function(){
       return {
         shared: store.state
+      }
+    },
+    methods: {
+      getImgUrl: function(pic){
+        return require('@/assets/images/'+pic);
       }
     }
   }

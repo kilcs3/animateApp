@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <p>Go to motor imagery: <router-link :to="'/exerciseMI/'+exercise.id">{{exercise.title}}</router-link></p>
+  <div class="margin">
     <v-row>
       <v-spacer></v-spacer>
       <v-col
@@ -8,9 +7,9 @@
         :lg="8"
       >
         <video
-            :src="exercise.video"
-            :poster="exercise.image"
-            @ended="onEnd"
+            :src="getVideoUrl(exercise.video)"
+            :poster="getImgUrl(exercise.image)"
+            @ended="onEnd(exercise)"
             class="grey lighten-2"
             width="100%"
             autoplay
@@ -29,8 +28,14 @@
   export default {
     name: "ExerciseAO",
     methods: {
-      onEnd: function(){
-        alert('video ended -> now go to motor imagery');
+      onEnd: function(exercise){
+        this.$router.push('/exerciseMI/'+exercise.id)
+      },
+      getImgUrl(pic) {
+        return require('@/assets/images/'+pic);
+      },
+      getVideoUrl(vid){
+        return require('@/assets/videos/'+vid);
       }
     },
     computed: {
@@ -38,7 +43,6 @@
         let exercise = store.getters.exercise(this.$route.params.id);
         if (!exercise) {
           exercise = {};
-          //this.$router.push('/');
         }
         return exercise;
       }
