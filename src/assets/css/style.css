@@ -7,3 +7,7 @@
     /*noinspection CssUnresolvedCustomProperty*/
     color: var(--v-gray_superdark-base);
 }
+
+.margin {
+    margin: 1em;
+}

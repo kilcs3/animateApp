@@ -5,7 +5,7 @@
     >
       <v-img
           alt="Reha logo"
-          src="assets/logo_text.png"
+          src="assets/images/logo_text.png"
           max-height="100px"
           max-width="100px"
       ></v-img>
