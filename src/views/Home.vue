@@ -9,12 +9,7 @@
           :lg="4"
       >
         <router-link :to="'/exerciseAO/'+exercise.id">
-          <v-img
-              :src="getImgUrl(exercise.image)"
-              aspect-ratio="1.5"
-              class="grey lighten-2"
-          >
-          </v-img>
+          <exercise-image :imgSource="exercise.image"></exercise-image>
         </router-link>
       </v-col>
     </v-row>
@@ -23,6 +18,7 @@
 
 <script>
   import store from '@/store';
+  import ExerciseImage from '@/components/ExerciseImage';
 
   export default {
     name: "Home",
@@ -31,10 +27,8 @@
         shared: store.state
       }
     },
-    methods: {
-      getImgUrl: function(pic){
-        return require('@/assets/images/'+pic);
-      }
+    components : {
+      'exercise-image': ExerciseImage
     }
   }
 </script>

@@ -6,16 +6,11 @@
         :cols="10"
         :lg="8"
       >
-        <video
-            :src="getVideoUrl(exercise.video)"
-            :poster="getImgUrl(exercise.image)"
-            @ended="onEnd(exercise)"
-            class="grey lighten-2"
-            width="100%"
-            autoplay
-        >
-          Dieses Video kann in Ihrem Browser nicht wiedergegeben werden.<br>
-        </video>
+        <exercise-video
+            :videoSource="exercise.video"
+            :imgSource="exercise.image"
+            @videoEnded="onVideoEnded(exercise)">
+        </exercise-video>
       </v-col>
       <v-spacer></v-spacer>
     </v-row>
@@ -24,29 +19,30 @@
 
 <script>
   import store from '@/store';
-
+  import ExerciseVideo from '@/components/ExerciseVideo';
   export default {
     name: "ExerciseAO",
+    components: {
+      'exercise-video': ExerciseVideo
+    },
+    data: function() {
+       return {
+         exercise: {}
+       }
+    },
     methods: {
-      onEnd: function(exercise){
+      onVideoEnded: function(exercise){
         this.$router.push('/exerciseMI/'+exercise.id)
-      },
-      getImgUrl(pic) {
-        return require('@/assets/images/'+pic);
-      },
-      getVideoUrl(vid){
-        return require('@/assets/videos/'+vid);
       }
     },
-    computed: {
-      exercise: function() {
+    created: function() {
         let exercise = store.getters.exercise(this.$route.params.id);
         if (!exercise) {
-          exercise = {};
+          this.$router.push("/");
+          return;
         }
-        return exercise;
+        this.exercise = exercise;
       }
-    }
   }
 </script>
 

@@ -5,14 +5,9 @@
       <v-col
           :cols="10"
           :lg="8"
+          @click="onClicked(exercise)"
       >
-        <v-img
-            :src="getImgUrl(exercise.imageMI)"
-            @click="onClicked(exercise)"
-            aspect-ratio="1.5"
-            class="grey lighten-2"
-        >
-        </v-img>
+        <exercise-image :imgSource="exercise.imageMI"></exercise-image>
       </v-col>
       <v-spacer></v-spacer>
     </v-row>
@@ -21,13 +16,14 @@
 
 <script>
   import store from '@/store';
+  import ExerciseImage from "@/components/ExerciseImage";
 
   export default {
     name: "ExerciseMI",
+    components: {
+      'exercise-image': ExerciseImage
+    },
     methods: {
-      getImgUrl(pic) {
-        return require('@/assets/images/'+pic);
-      },
       onClicked: function(exercise){
         this.$router.push('/exerciseFinished/'+exercise.id);
       }

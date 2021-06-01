@@ -29,15 +29,10 @@
       return {
         title: "Übung auswählen"
       }
-    }/*,
+    },
     methods: {
-      getImgUrl(pic) {
-        return require('@/assets/images/'+pic);
-      },
-      getVideoUrl(vid){
-        return require('@/assets/videos/'+vid);
-      }
-    }*/
+
+    }
   };
 </script>
 

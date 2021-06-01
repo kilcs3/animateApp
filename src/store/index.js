@@ -16,6 +16,6 @@ function getExercise(id) {
 export default {
     state: state,
     getters: {
-        exercise: getExercise
+        exercise: getExercise,
     }
 }
