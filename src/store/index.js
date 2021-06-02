@@ -6,7 +6,8 @@ const state = {
         { id: 4, title: "Trinken", image: "drink.jpg", video:"drink.mp4", imageMI: "drinkMI.jpg" },
         { id: 5, title: "Händewaschen", image: "washhands.jpg", video:"washhands.mp4", imageMI: "washhandsMI.jpg" },
         { id: 6, title: "Linie zeichnen", image: "drawline.jpg", video:"drawline.mp4", imageMI: "drawlineMI.jpg" }
-    ]
+    ],
+    title: "Übung auswählen"
 };
 
 function getExercise(id) {
@@ -16,6 +17,6 @@ function getExercise(id) {
 export default {
     state: state,
     getters: {
-        exercise: getExercise,
+        exercise: getExercise
     }
 }

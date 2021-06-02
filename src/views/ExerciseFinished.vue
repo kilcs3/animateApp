@@ -38,22 +38,27 @@
 
   export default {
     name: "ExerciseFinished",
+    data: function(){
+      return {
+        shared: store.state
+      }
+    },
     methods: {
       back: function(){
         this.$router.push("/");
       }
     },
-    computed: {
-      exercise: function() {
-        let exercise = store.getters.exercise(this.$route.params.id);
-        if (!exercise) {
-          exercise = {};
-        }
-        return exercise;
-      }
-    },
     components: {
       'exercise-image': ExerciseImage
+    },
+    created: function() {
+      this.shared.title = "Übung beendet";
+      let exercise = store.getters.exercise(this.$route.params.id);
+      if (!exercise) {
+        this.$router.push("/");
+        return;
+      }
+      this.exercise = exercise;
     }
   }
 </script>

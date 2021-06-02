@@ -13,7 +13,7 @@
           max-width="80px"
       ></v-img>
       <v-spacer></v-spacer>
-      <v-toolbar-title>{{ title }}</v-toolbar-title>
+      <v-toolbar-title>{{ shared.title }}</v-toolbar-title>
       <v-spacer></v-spacer>
     </v-app-bar>
     <v-main>
@@ -23,11 +23,13 @@
 </template>
 
 <script>
+import store from '@/store';
+
   export default {
     name: 'App',
     data: function() {
       return {
-        title: "Übung auswählen"
+        shared: store.state
       }
     },
     methods: {

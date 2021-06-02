@@ -23,19 +23,24 @@
     components: {
       'exercise-image': ExerciseImage
     },
+    data: function(){
+      return {
+        shared: store.state
+      }
+    },
     methods: {
       onClicked: function(exercise){
         this.$router.push('/exerciseFinished/'+exercise.id);
       }
     },
-    computed: {
-      exercise: function() {
-        let exercise = store.getters.exercise(this.$route.params.id);
-        if (!exercise) {
-          exercise = {};
-        }
-        return exercise;
+    created: function() {
+      this.shared.title = "Übung vorstellen";
+      let exercise = store.getters.exercise(this.$route.params.id);
+      if (!exercise) {
+        this.$router.push("/");
+        return;
       }
+      this.exercise = exercise;
     }
   }
 </script>

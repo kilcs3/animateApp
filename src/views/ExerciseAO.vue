@@ -27,6 +27,7 @@
     },
     data: function() {
        return {
+         shared: store.state,
          exercise: {}
        }
     },
@@ -36,6 +37,7 @@
       }
     },
     created: function() {
+        this.shared.title = "Übung beobachten";
         let exercise = store.getters.exercise(this.$route.params.id);
         if (!exercise) {
           this.$router.push("/");

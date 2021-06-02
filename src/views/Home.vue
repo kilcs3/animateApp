@@ -29,6 +29,9 @@
     },
     components : {
       'exercise-image': ExerciseImage
+    },
+    created: function() {
+      this.shared.title = "Übung auswählen";
     }
   }
 </script>
