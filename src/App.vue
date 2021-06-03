@@ -31,9 +31,6 @@ import store from '@/store';
       return {
         shared: store.state
       }
-    },
-    methods: {
-
     }
   };
 </script>

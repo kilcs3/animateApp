@@ -14,6 +14,40 @@
       </v-col>
       <v-spacer></v-spacer>
     </v-row>
+    <v-row>
+      <v-spacer></v-spacer>
+      <v-col
+          :cols="10"
+          :sm="8"
+          :md="6"
+          :lg="4"
+      >
+        <v-btn
+            width="40%"
+            x-large
+
+        >
+          <v-icon>mdi-arrow-left-bold</v-icon>
+          <div class="margin">Zurück</div>
+        </v-btn>
+      </v-col>
+        <v-col
+            :cols="10"
+            :sm="8"
+            :md="6"
+            :lg="4"
+        >
+        <v-btn
+            width="40%"
+            x-large
+
+        >
+          <div class="margin">Vorwärts</div>
+          <v-icon>mdi-arrow-right-bold</v-icon>
+        </v-btn>
+      </v-col>
+      <v-spacer></v-spacer>
+    </v-row>
   </div>
 </template>
 
@@ -22,9 +56,6 @@
   import ExerciseVideo from '@/components/ExerciseVideo';
   export default {
     name: "ExerciseAO",
-    components: {
-      'exercise-video': ExerciseVideo
-    },
     data: function() {
        return {
          shared: store.state,
@@ -35,6 +66,9 @@
       onVideoEnded: function(exercise){
         this.$router.push('/exerciseMI/'+exercise.id)
       }
+    },
+    components: {
+      'exercise-video': ExerciseVideo
     },
     created: function() {
         this.shared.title = "Übung beobachten";

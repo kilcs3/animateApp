@@ -20,9 +20,6 @@
 
   export default {
     name: "ExerciseMI",
-    components: {
-      'exercise-image': ExerciseImage
-    },
     data: function(){
       return {
         shared: store.state
@@ -32,6 +29,9 @@
       onClicked: function(exercise){
         this.$router.push('/exerciseFinished/'+exercise.id);
       }
+    },
+    components: {
+      'exercise-image': ExerciseImage
     },
     created: function() {
       this.shared.title = "Übung vorstellen";
