@@ -4,7 +4,9 @@
       <v-spacer></v-spacer>
       <v-col
           :cols="10"
-          :lg="8"
+          :sm="6"
+          :md="4"
+          :lg="3"
       >
         <exercise-image :imgSource="exercise.imageMI"></exercise-image>
       </v-col>

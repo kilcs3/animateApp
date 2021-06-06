@@ -4,7 +4,9 @@
       <v-spacer></v-spacer>
       <v-col
           :cols="10"
-          :lg="8"
+          :sm="6"
+          :md="4"
+          :lg="3"
       >
         <exercise-video
             :videoSource="exercise.video"
@@ -21,7 +23,11 @@
           :md="6"
           :lg="4"
       >
-        <v-btn x-large width="90mm">
+        <v-btn
+            x-large
+            width="90mm"
+            @click="back"
+        >
           <v-icon left>mdi-arrow-left-bold</v-icon>
           <div class="margin">Zurück zur Übersicht</div>
         </v-btn>
@@ -35,8 +41,12 @@
           :sm="8"
           :md="6"
           :lg="4"
+    >
+      <v-btn
+          x-large
+          width="90mm"
+          @click="next"
       >
-        <v-btn x-large width="90mm">
           <div class="margin">Weiter zu Motor Imagery</div>
           <v-icon right>mdi-arrow-right-bold</v-icon>
         </v-btn>
@@ -61,6 +71,12 @@ export default {
   methods: {
     onVideoEnded: function (exercise) {
       this.$router.push('/exerciseMI/' + exercise.id)
+    },
+    back: function(){
+      this.$router.push("/");
+    },
+    next: function(exercise){
+      this.$router.push('/exerciseMI/' + exercise.id);
     }
   },
   components: {
