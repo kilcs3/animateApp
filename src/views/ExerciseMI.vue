@@ -34,7 +34,7 @@
       'exercise-image': ExerciseImage
     },
     created: function() {
-      this.shared.title = "Übung vorstellen";
+      this.shared.title = "Übung sich vorstellen";
       let exercise = store.getters.exercise(this.$route.params.id);
       if (!exercise) {
         this.$router.push("/");
