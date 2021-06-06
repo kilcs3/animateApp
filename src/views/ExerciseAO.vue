@@ -21,12 +21,8 @@
           :md="6"
           :lg="4"
       >
-        <v-btn
-            width="85%"
-            x-large
-
-        >
-          <v-icon>mdi-arrow-left-bold</v-icon>
+        <v-btn x-large>
+          <v-icon left>mdi-arrow-left-bold</v-icon>
           <div class="margin">Zurück zur Übersicht</div>
         </v-btn>
       </v-col>
@@ -40,13 +36,9 @@
           :md="6"
           :lg="4"
       >
-        <v-btn
-            width="85%"
-            x-large
-
-        >
+        <v-btn x-large>
           <div class="margin">Weiter zu MI</div>
-          <v-icon>mdi-arrow-right-bold</v-icon>
+          <v-icon right>mdi-arrow-right-bold</v-icon>
         </v-btn>
       </v-col>
     </v-row>
