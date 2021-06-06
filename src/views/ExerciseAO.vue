@@ -21,7 +21,7 @@
           :md="6"
           :lg="4"
       >
-        <v-btn x-large>
+        <v-btn x-large width="90mm">
           <v-icon left>mdi-arrow-left-bold</v-icon>
           <div class="margin">Zurück zur Übersicht</div>
         </v-btn>
@@ -36,8 +36,8 @@
           :md="6"
           :lg="4"
       >
-        <v-btn x-large>
-          <div class="margin">Weiter zu MI</div>
+        <v-btn x-large width="90mm">
+          <div class="margin">Weiter zu Motor Imagery</div>
           <v-icon right>mdi-arrow-right-bold</v-icon>
         </v-btn>
       </v-col>
