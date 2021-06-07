@@ -45,7 +45,7 @@
       <v-btn
           x-large
           width="90mm"
-          @click="next"
+          @click="next(exercise)"
       >
           <div class="margin">Weiter zu Motor Imagery</div>
           <v-icon right>mdi-arrow-right-bold</v-icon>
