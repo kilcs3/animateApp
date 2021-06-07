@@ -16,6 +16,11 @@
       </v-col>
       <v-spacer></v-spacer>
     </v-row>
+    <base-timer
+        class="float-right mb-5 mr-0 mr-sm-1 mr-md-5 mr-lg-8"
+        :timeLimit="timeLimit"
+    ></base-timer>
+    <div class="clearer"></div>
     <nav-buttons
         :backLink="'/'"
         :backText="'Zurück zur Übersicht'"
@@ -29,12 +34,14 @@
 import store from '@/store';
 import ExerciseVideo from '@/components/ExerciseVideo';
 import NavigationButtons from "@/components/NavigationButtons";
+import Timer from "@/components/Timer";
 
 export default {
   name: "ExerciseAO",
   data: function () {
     return {
       shared: store.state,
+      timeLimit: 30,
       exercise: {}
     }
   },
@@ -45,7 +52,8 @@ export default {
   },
   components: {
     'exercise-video': ExerciseVideo,
-    'nav-buttons': NavigationButtons
+    'nav-buttons': NavigationButtons,
+    'base-timer': Timer
   },
   created: function () {
     this.shared.title = "Übung beobachten";
