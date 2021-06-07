@@ -7,18 +7,24 @@
           :sm="6"
           :md="4"
           :lg="3"
-          @click="onClicked(exercise)"
       >
         <exercise-image :imgSource="exercise.imageMI"></exercise-image>
       </v-col>
       <v-spacer></v-spacer>
     </v-row>
+    <nav-buttons
+        :backLink="'/exerciseAO/' + exercise.id"
+        :backText="'Zurück zum Beobachten'"
+        :nextLink="'/exerciseFinished/'+exercise.id"
+        :nextText="'Übung beenden'"
+    ></nav-buttons>
   </div>
 </template>
 
 <script>
   import store from '@/store';
   import ExerciseImage from "@/components/ExerciseImage";
+  import NavigationButtons from "@/components/NavigationButtons";
 
   export default {
     name: "ExerciseMI",
@@ -27,13 +33,9 @@
         shared: store.state
       }
     },
-    methods: {
-      onClicked: function(exercise){
-        this.$router.push('/exerciseFinished/'+exercise.id);
-      }
-    },
     components: {
-      'exercise-image': ExerciseImage
+      'exercise-image': ExerciseImage,
+      'nav-buttons': NavigationButtons
     },
     created: function() {
       this.shared.title = "Übung sich vorstellen";
