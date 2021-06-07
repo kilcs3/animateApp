@@ -37,7 +37,8 @@
     data: function(){
       return {
         shared: store.state,
-        timeLimit: 30
+        timeLimit: 30,
+        interval: ""
       }
     },
     components: {
@@ -59,6 +60,9 @@
           }.bind(this),
           this.timeLimit * 1000
       );
+    },
+    beforeDestroy() {
+      clearTimeout(this.interval);
     }
   }
 </script>
