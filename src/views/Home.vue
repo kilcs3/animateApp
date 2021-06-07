@@ -10,6 +10,7 @@
       >
         <router-link :to="'/exerciseAO/'+exercise.id">
           <exercise-image :imgSource="exercise.image"></exercise-image>
+          <p class="description">{{exercise.title}}</p>
         </router-link>
       </v-col>
     </v-row>
