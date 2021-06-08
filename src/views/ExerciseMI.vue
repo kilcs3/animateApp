@@ -56,6 +56,7 @@
       this.exercise = exercise;
       this.interval = setTimeout(
           function () {
+            //hier Ton abspielen!
             this.$router.push({path: '/exerciseFinished/' + this.exercise.id});
           }.bind(this),
           this.timeLimit * 1000

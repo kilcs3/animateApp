@@ -1,8 +1,9 @@
 <template>
   <div>
     <v-row>
+      <v-spacer></v-spacer>
       <v-col
-          :cols="12"
+          :cols="10"
           :md="6"
       >
         <v-btn
@@ -15,7 +16,7 @@
         </v-btn>
       </v-col>
       <v-col
-          :cols="12"
+          :cols="10"
           :md="6"
       >
         <v-btn
@@ -27,6 +28,7 @@
           <v-icon right>mdi-arrow-right-bold</v-icon>
         </v-btn>
       </v-col>
+      <v-spacer></v-spacer>
     </v-row>
   </div>
 </template>

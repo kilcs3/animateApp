@@ -26,6 +26,7 @@
         :backText="'Zurück zur Übersicht'"
         :nextLink="'/exerciseMI/' + exercise.id"
         :nextText="'Weiter zum Vorstellen'"
+        class="margin"
     ></nav-buttons>
   </div>
 </template>
