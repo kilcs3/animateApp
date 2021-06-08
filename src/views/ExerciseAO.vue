@@ -16,71 +16,44 @@
       </v-col>
       <v-spacer></v-spacer>
     </v-row>
-    <v-row>
-      <v-col
-          :cols="10"
-          :sm="8"
-          :md="6"
-          :lg="4"
-      >
-        <v-btn
-            x-large
-            width="90mm"
-            @click="back"
-        >
-          <v-icon left>mdi-arrow-left-bold</v-icon>
-          <div class="margin">Zurück zur Übersicht</div>
-        </v-btn>
-      </v-col>
-      <v-spacer></v-spacer>
-    </v-row>
-    <v-row>
-      <v-spacer></v-spacer>
-    <v-col
-          :cols="10"
-          :sm="8"
-          :md="6"
-          :lg="4"
-    >
-      <v-btn
-          x-large
-          width="90mm"
-          @click="next"
-      >
-          <div class="margin">Weiter zu Motor Imagery</div>
-          <v-icon right>mdi-arrow-right-bold</v-icon>
-        </v-btn>
-      </v-col>
-    </v-row>
-    <v-spacer></v-spacer>
+    <base-timer
+        class="float-right mb-5 mr-0 mr-sm-1 mr-md-5 mr-lg-8"
+        :timeLimit="timeLimit"
+    ></base-timer>
+    <div class="clearer"></div>
+    <nav-buttons
+        :backLink="'/'"
+        :backText="'Zurück zur Übersicht'"
+        :nextLink="'/exerciseMI/' + exercise.id"
+        :nextText="'Weiter zum Vorstellen'"
+    ></nav-buttons>
   </div>
 </template>
 
 <script>
 import store from '@/store';
 import ExerciseVideo from '@/components/ExerciseVideo';
+import NavigationButtons from "@/components/NavigationButtons";
+import Timer from "@/components/Timer";
 
 export default {
   name: "ExerciseAO",
   data: function () {
     return {
       shared: store.state,
+      timeLimit: 30,
       exercise: {}
     }
   },
   methods: {
     onVideoEnded: function (exercise) {
       this.$router.push('/exerciseMI/' + exercise.id)
-    },
-    back: function(){
-      this.$router.push("/");
-    },
-    next: function(exercise){
-      this.$router.push('/exerciseMI/' + exercise.id);
     }
   },
   components: {
-    'exercise-video': ExerciseVideo
+    'exercise-video': ExerciseVideo,
+    'nav-buttons': NavigationButtons,
+    'base-timer': Timer
   },
   created: function () {
     this.shared.title = "Übung beobachten";

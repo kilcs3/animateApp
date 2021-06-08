@@ -16,9 +16,9 @@
       <v-spacer></v-spacer>
       <v-col
           :cols="10"
-          :sm="8"
-          :md="6"
-          :lg="4"
+          :sm="6"
+          :md="4"
+          :lg="3"
       >
         <v-btn
             width="100%"
