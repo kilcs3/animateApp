@@ -55,6 +55,7 @@
         return;
       }
       this.exercise = exercise;
+      this.timeLimit = Math.round(this.exercise.duration*1.2);
       this.interval = setTimeout(
           function () {
             //hier Ton abspielen!

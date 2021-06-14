@@ -64,7 +64,8 @@ export default {
       this.$router.push("/");
       return;
     }
-    this.exercise = exercise;
+    this.exercise = exercise
+    this.timeLimit = this.exercise.duration;
   }
 }
 </script>

@@ -1,11 +1,11 @@
 const state = {
     exercises: [
-        { id: 1, title: "Laufen", image: "walk.jpg", video:"walk.mp4", imageMI: "walkMI.jpg", imageFinished: "walkFinished.jpg"},
-        { id: 2, title: "Treppen steigen", image: "stairs.jpg", video:"stairs.mp4", imageMI: "stairsMI.jpg", imageFinished: "stairsFinished.jpg"},
-        { id: 3, title: "Aufstehen", image: "standup.jpg", video:"standup.mp4", imageMI: "standupMI.jpg", imageFinished: "standupFinished.jpg"},
-        { id: 4, title: "Trinken", image: "drink.jpg", video:"drink.mp4", imageMI: "drinkMI.jpg", imageFinished: "drinkFinished.jpg"},
-        { id: 5, title: "Händewaschen", image: "washhands.jpg", video:"washhands.mp4", imageMI: "washhandsMI.jpg", imageFinished: "washhandsFinished.jpg"},
-        { id: 6, title: "Linie zeichnen", image: "drawline.jpg", video:"drawline.mp4", imageMI: "drawlineMI.jpg", imageFinished: "drawFinished.jpg"}
+        { id: 1, title: "Laufen", duration:49, image: "walk.jpg", video:"walk.mp4", imageMI: "walkMI.jpg", imageFinished: "walkFinished.jpg"},
+        { id: 2, title: "Treppen steigen", duration:15, image: "stairs.jpg", video:"stairs.mp4", imageMI: "stairsMI.jpg", imageFinished: "stairsFinished.jpg"},
+        { id: 3, title: "Aufstehen", duration:103, image: "standup.jpg", video:"standup.mp4", imageMI: "standupMI.jpg", imageFinished: "standupFinished.jpg"},
+        { id: 4, title: "Trinken", duration:14, image: "drink.jpg", video:"drink.mp4", imageMI: "drinkMI.jpg", imageFinished: "drinkFinished.jpg"},
+        { id: 5, title: "Händewaschen", duration:33, image: "washhands.jpg", video:"washhands.mp4", imageMI: "washhandsMI.jpg", imageFinished: "washhandsFinished.jpg"},
+        { id: 6, title: "Linie zeichnen", duration:20, image: "drawline.jpg", video:"drawline.mp4", imageMI: "drawlineMI.jpg", imageFinished: "drawFinished.jpg"}
     ],
     title: "Übung auswählen"
 };
