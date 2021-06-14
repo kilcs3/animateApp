@@ -13,6 +13,7 @@
             :imgSource="exercise.image"
             @videoEnded="onVideoEnded(exercise)">
         </exercise-video>
+        <p class="description">Beobachten Sie die gezeigte &Uuml;bung.</p>
       </v-col>
       <v-spacer></v-spacer>
     </v-row>

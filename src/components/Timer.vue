@@ -6,7 +6,6 @@
         <path
             :stroke-dasharray="circleDasharray"
             class="base-timer__path-remaining"
-            :class="remainingPathColor"
             d="
             M 50, 50
             m -45, 0
@@ -22,22 +21,6 @@
 
 <script>
 const FULL_DASH_ARRAY = 283;
-const WARNING_THRESHOLD = 10;
-const ALERT_THRESHOLD = 5;
-
-const COLOR_CODES = {
-  info: {
-    color: "green"
-  },
-  warning: {
-    color: "orange",
-    threshold: WARNING_THRESHOLD
-  },
-  alert: {
-    color: "red",
-    threshold: ALERT_THRESHOLD
-  }
-};
 
 export default {
   data() {
@@ -71,18 +54,6 @@ export default {
     timeFraction() {
       const rawTimeFraction = this.timeLeft / this.timeLimit;
       return rawTimeFraction - (1 / this.timeLimit) * (1 - rawTimeFraction);
-    },
-
-    remainingPathColor() {
-      const { alert, warning, info } = COLOR_CODES;
-
-      if (this.timeLeft <= alert.threshold) {
-        return alert.color;
-      } else if (this.timeLeft <= warning.threshold) {
-        return warning.color;
-      } else {
-        return info.color;
-      }
     }
   },
 
@@ -113,8 +84,8 @@ export default {
 <style scoped lang="scss">
 .base-timer {
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
 
   &__svg {
     transform: scaleX(-1);
@@ -137,30 +108,19 @@ export default {
     transform-origin: center;
     transition: 1s linear all;
     fill-rule: nonzero;
-    stroke: currentColor;
-
-    &.green {
-      color: rgb(65, 184, 131);
-    }
-
-    &.orange {
-      color: orange;
-    }
-
-    &.red {
-      color: red;
-    }
+    /*noinspection CssUnresolvedCustomProperty*/
+    stroke: var(--v-green-base);
   }
 
   &__label {
     position: absolute;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     top: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 48px;
+    font-size: 44px;
   }
 }
 </style>

@@ -9,7 +9,7 @@
           :lg="3"
       >
         <exercise-image :imgSource="exercise.imageMI"></exercise-image>
-        <p class="description">Stellen Sie sich die soeben gesehene Übung vor.</p>
+        <p class="description">Stellen Sie sich die soeben gesehene &Uuml;bung vor.</p>
       </v-col>
       <v-spacer></v-spacer>
     </v-row>
