@@ -27,7 +27,7 @@
             @click="back"
         >
           <v-icon>mdi-arrow-left-bold</v-icon>
-          <div class="margin">Übungsauswahl</div>
+          <div class="margin text-transform-none">Übungsauswahl</div>
         </v-btn>
       </v-col>
       <v-spacer></v-spacer>

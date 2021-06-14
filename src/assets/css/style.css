@@ -26,6 +26,10 @@
     font-size: 1.3em;
 }
 
+.text-transform-none {
+    text-transform: none;
+}
+
 a {
     text-decoration: none;
 }
