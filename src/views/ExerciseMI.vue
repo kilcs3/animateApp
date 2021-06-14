@@ -8,7 +8,7 @@
           :md="4"
           :lg="3"
       >
-        <exercise-image :imgSource="exercise.imageMI"></exercise-image>
+        <exercise-image :imgSource="exercise.imageMI" :aspectRatio="0.8"></exercise-image>
         <p class="description">Stellen Sie sich die soeben gesehene &Uuml;bung vor.</p>
       </v-col>
       <v-spacer></v-spacer>

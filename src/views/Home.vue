@@ -9,7 +9,7 @@
           :lg="4"
       >
         <router-link :to="'/exerciseAO/'+exercise.id">
-          <exercise-image :imgSource="exercise.image"></exercise-image>
+          <exercise-image :imgSource="exercise.image" :aspectRatio="1.5"></exercise-image>
           <p class="description">{{exercise.title}}</p>
         </router-link>
       </v-col>
