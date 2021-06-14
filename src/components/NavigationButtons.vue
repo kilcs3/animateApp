@@ -3,7 +3,7 @@
     <v-row>
       <v-spacer></v-spacer>
       <v-col
-          :cols="10"
+          :cols="12"
           :md="6"
       >
         <v-btn
@@ -12,11 +12,11 @@
             @click="back"
         >
           <v-icon left>mdi-arrow-left-bold</v-icon>
-          <div class="margin">{{backText}}</div>
+          <div class="margin text-transform-none">{{backText}}</div>
         </v-btn>
       </v-col>
       <v-col
-          :cols="10"
+          :cols="12"
           :md="6"
       >
         <v-btn
@@ -24,7 +24,7 @@
             width="90mm"
             @click="next"
         >
-          <div class="margin">{{nextText}}</div>
+          <div class="margin text-transform-none">{{nextText}}</div>
           <v-icon right>mdi-arrow-right-bold</v-icon>
         </v-btn>
       </v-col>

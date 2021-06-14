@@ -23,6 +23,7 @@
         :backText="'Zurück zum Beobachten'"
         :nextLink="'/exerciseFinished/'+exercise.id"
         :nextText="'Übung beenden'"
+        class="margin"
     ></nav-buttons>
   </div>
 </template>
