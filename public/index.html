@@ -22,10 +22,13 @@
         <img id="logo" alt="Reha logo" src="/img/logo.png"><br/>
         <h2 id="logoText">beobachten. vorstellen. besser werden.</h2>
     </div>
-    <div id="overlayBackground"> <!-- white background for the overlaying "title screen". Definition: see
+    <div id="overlayBackground"></div> <!-- white background for the overlaying "title screen". Definition: see
     <style> tag. -->
-    </div>
     <style>
+        body {
+            position: relative;
+        }
+
         #overlay {  /** the position (x,y,z) and size (heigth, with), as well as an initial opacity of 0.0, and the alignement of text
     are defined. The 'transition' feature defines how quickly the overlaying "title screen" vanishes.**/
             position: absolute;
