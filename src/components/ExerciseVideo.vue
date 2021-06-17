@@ -6,6 +6,7 @@
       class="grey lighten-2"
       width="100%"
       autoplay
+      muted
   >
     Dieses Video kann in Ihrem Browser nicht wiedergegeben werden.<br>
   </video>

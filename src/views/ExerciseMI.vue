@@ -8,7 +8,7 @@
           :md="4"
           :lg="3"
       >
-        <exercise-image :imgSource="exercise.imageMI" :aspectRatio="0.8"></exercise-image>
+        <exercise-image :imgSource="exercise.imageMI" :aspectRatio="1.23"></exercise-image>
         <p class="description">Stellen Sie sich die soeben gesehene &Uuml;bung vor.</p>
       </v-col>
       <v-spacer></v-spacer>
@@ -58,7 +58,7 @@
       this.timeLimit = Math.round(this.exercise.duration*1.2);
       this.interval = setTimeout(
           function () {
-            //hier Ton abspielen!
+            new Audio(require('@/assets/sounds/MI-finished.mp3')).play();
             this.$router.push({path: '/exerciseFinished/' + this.exercise.id});
           }.bind(this),
           this.timeLimit * 1000
