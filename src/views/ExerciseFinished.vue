@@ -9,7 +9,7 @@
           :lg="3"
       >
         <exercise-image :imgSource="exercise.imageFinished" :aspectRatio="1.5"></exercise-image>
-        <p class="description">Sie haben die &Uuml;bung erfolgreich beendet.</p>
+        <p class="description">Sie haben die &Uuml;bung erfolgreich beendet!</p>
       </v-col>
       <v-spacer></v-spacer>
     </v-row>
