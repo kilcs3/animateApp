@@ -15,15 +15,19 @@
     <noscript>
       <strong>We're sorry but ANIMATE doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-    <div id="overlay"> <!-- when app is first started, a "title screen" is displayed (i.e., overlayed over the otherwise
-     displayed home screen Home.vue) for some time -->
+    <div id="app">
+        <!-- built files will be auto injected -->
+    </div>
+    <div id="overlay">
+        <!-- when app is started, a "title screen" is displayed (i.e., overlayed over the otherwise
+     displayed home screen Home.vue) for some time (timer: see <script> tag) -->
         <img id="logo" alt="Reha logo" src="/img/logo.png"><br/>
         <h2 id="logoText">beobachten. vorstellen. besser werden.</h2>
     </div>
-    <div id="overlayBackground"></div> <!-- white background for the overlaying "title screen". Definition: see
+    <div id="overlayBackground">
+        <!-- white background for the overlaying "title screen". Definition: see
     <style> tag. -->
+    </div>
     <style>
         body {
             position: relative;
@@ -92,6 +96,7 @@
         setTimeout(function() {
             overlayBackground.remove();
         }, 5000);
+
     </script>
   </body>
 </html>

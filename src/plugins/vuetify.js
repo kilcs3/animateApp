@@ -21,6 +21,7 @@ const theme = {
   dark: '#343a40',
   section: '#f4f4f4',
   green: '#93BC3A',
+  greenShade: '#d8e5b6',
   gray_superdark: '#4E4E4E',
   gray_superlight: '#f4f4f4',
   gray_cookiebar: 'rgba(244,244,244,0.8)',
