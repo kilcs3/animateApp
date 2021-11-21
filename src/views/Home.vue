@@ -32,7 +32,7 @@
       'exercise-image': ExerciseImage
     },
     created: function() {
-      this.shared.title = "Übung auswählen";
+      this.shared.title = "auswählen";
     }
   }
 </script>

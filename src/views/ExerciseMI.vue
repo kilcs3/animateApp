@@ -48,7 +48,7 @@
       'base-timer': Timer
     },
     created: function() {
-      this.shared.title = "Übung sich vorstellen";
+      this.shared.title = "Vorstellen";
       let exercise = store.getters.exercise(this.$route.params.id);
       if (!exercise) {
         this.$router.push("/");

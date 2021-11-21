@@ -9,12 +9,12 @@
           alt="Reha logo"
           src="@/assets/images/logo_min.png"
           class="logo"
-          max-height="80px"
-          max-width="80px"
+          max-height="70px"
+          max-width="70px"
       ></v-img>
-      <v-spacer></v-spacer>
-      <v-toolbar-title>{{ shared.title }}</v-toolbar-title>
-      <v-spacer></v-spacer>
+      <v-spacer/>
+      <v-toolbar-title class="flex text-left">{{ shared.title }}</v-toolbar-title>
+      <v-spacer/>
     </v-app-bar>
     <v-main>
       <router-view/>

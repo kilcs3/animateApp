@@ -58,7 +58,7 @@ export default {
     'base-timer': Timer
   },
   created: function () {
-    this.shared.title = "Übung beobachten";
+    this.shared.title = "Beobachten";
     let exercise = store.getters.exercise(this.$route.params.id);
     if (!exercise) {
       this.$router.push("/");
