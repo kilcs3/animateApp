@@ -3,14 +3,14 @@
     <v-app-bar
         color="green"
         app
-        height="100px"
+        height="50px"
     >
       <v-img
           alt="App logo"
           src="@/assets/images/logo_min.png"
           class="logo"
-          max-height="60px"
-          max-width="60px"
+          max-height="35px"
+          max-width="35px"
       ></v-img>
       <v-spacer/>
       <v-toolbar-title class="flex text-left">{{ shared.title }}</v-toolbar-title>
@@ -55,7 +55,7 @@
             </v-list-item-icon>
             <v-list-item-title>Handbuch</v-list-item-title>
           </v-list-item>
-          <v-list-item>
+          <v-list-item @click="toEducation">
             <v-list-item-icon>
               <v-icon>mdi-presentation</v-icon>
               <!-- other icons that maybe fit better:
@@ -92,7 +92,11 @@ import store from '@/store';
         this.$router.push("/");
       },
       toTutorial: function(){
-        this.$router.push('/PatientEducation');
+        this.$router.push("/Tutorial");
+      }
+      ,
+      toEducation: function(){
+        this.$router.push("/PatientEducation");
       }
     },
   };

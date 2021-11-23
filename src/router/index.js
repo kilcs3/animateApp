@@ -4,6 +4,9 @@ import Home from '../views/Home.vue'
 import ExerciseAO from "@/views/ExerciseAO";
 import ExerciseMI from "@/views/ExerciseMI";
 import ExerciseFinished from "@/views/ExerciseFinished";
+import PatientEducation from "@/views/PatientEducation";
+import PatientEducation2 from "@/views/PatientEducation2";
+import Tutorial from "@/views/Tutorial";
 
 Vue.use(VueRouter)
 
@@ -27,6 +30,21 @@ const routes = [
     path: '/exerciseFinished/:id',
     name: 'exerciseFinished',
     component: ExerciseFinished
+  },
+  {
+    path: '/patientEducation/',
+    name: 'patientEducation',
+    component: PatientEducation
+  },
+  {
+    path: '/patientEducation2/',
+    name: 'patientEducation2',
+    component: PatientEducation2
+  },
+  {
+    path: '/tutorial/',
+    name: 'tutorial',
+    component: Tutorial
   },
 ]
 

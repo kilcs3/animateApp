@@ -8,7 +8,7 @@
           :md="4"
           :lg="3"
       >
-        <p class="description" id="descrEdu">Worum es geht <br>
+        <p class="description" id="descrEdu">Wort <br>
           in dieser App</p>
         <p class="description" id="descrTut">Wie die App funktioniert</p>
       </v-col>
@@ -34,8 +34,7 @@ export default {
   name: "patientEducation",
   data: function(){
     return {
-      shared: store.state,
-      interval: ""
+      shared: store.state
     }
   },
   created: function () {

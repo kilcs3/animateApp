@@ -7,9 +7,6 @@ const state = {
         { id: 5, title: "Händewaschen", duration:72, image: "washhands.jpg", video:"washhands.mp4", imageMI: "washhandsMI.jpg", imageFinished: "washhandsFinished.jpg"},
         { id: 6, title: "Linie Zeichnen", duration:59, image: "drawline.jpg", video:"drawline.mp4", imageMI: "drawlineMI.jpg", imageFinished: "drawFinished.jpg"}
     ],
-    docus: [
-        { id: 1, title: "Wissen"}
-    ],
     title: "Übung auswählen"
 };
 
@@ -17,14 +14,9 @@ function getExercise(id) {
     return state.exercises.find(exercise => exercise.id === Number(id));
 }
 
-function getDocu(id) {
-    return state.docus.find(docu => docu.id === Number(id));
-}
-
 export default {
     state: state,
     getters: {
         exercise: getExercise,
-        docu: getDocu
     }
 }
