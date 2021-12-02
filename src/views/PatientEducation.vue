@@ -11,6 +11,7 @@
         <p class="description" id="descrEdu">Worum es geht <br>
           in dieser App</p>
         <p class="description" id="descrTut">Wie die App funktioniert</p>
+        <v-btn to="/PatientEducation2"></v-btn>
       </v-col>
       <v-spacer></v-spacer>
     </v-row>
@@ -22,13 +23,12 @@
   margin-top: 25%;
 }
 #descrTut {  /** the initial opacity of 0.0. The 'transition' feature defines how quickly the overlaying "title screen" vanishes.**/
-  opacity: 1;
+  opacity: 0;
   transition: opacity 1s;
 }
 </style>
 
 <script>
-const descrTut = document.getElementById("descrTut");
 import store from '@/store';
 export default {
   name: "patientEducation",
@@ -41,20 +41,24 @@ export default {
   created: function () {
     this.shared.title = "Wissen";
 
-    /** After 1s, the second paragraph, descrTut, fades in.**/
-    setTimeout(function() {
-      descrTut.style.opacity = 1;
-    }, 1000);
-
-    /** After 3s, move to the next screen.**/
-    setTimeout(function() {
-      this.$router.push("/PatientEducation2");
-    }, 3000);
+    this.interval = setTimeout(
+        function () {
+          document.getElementById("descrTut").style.opacity = 1;
+          console.log("done");
+        },
+        2000
+    );
+    this.interval = setTimeout(
+        function () {
+          this.$router.push({path: '/PatientEducation2'});
+        }.bind(this),
+        5000
+    );
 
   },
   beforeDestroy() {
     clearTimeout(this.interval);
-  }
+  },
 }
 </script>
 
