@@ -28,7 +28,15 @@
         :nextLink="'/exerciseMI/' + exercise.id"
         :nextText="'Weiter zum Vorstellen'"
         class="margin"
-    ></nav-buttons>
+    ><!-- mögliches Icon für MI:
+            mdi-thought-bubble-outline
+          für AO:
+            mdi-filmstrip
+            mdi-play-box-outline
+          mögliche Icons für next/back:
+            mdi-menu-right
+            mdi-menu-left
+          /--></nav-buttons>
   </div>
 </template>
 

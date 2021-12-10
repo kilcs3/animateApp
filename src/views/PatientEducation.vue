@@ -11,10 +11,24 @@
         <p class="description" id="descrEdu">Worum es geht <br>
           in dieser App</p>
         <p class="description" id="descrTut">Wie die App funktioniert</p>
-        <v-btn to="/PatientEducation2"></v-btn>
+        <v-spacer></v-spacer>
       </v-col>
-      <v-spacer></v-spacer>
     </v-row>
+    <v-row>
+      <v-btn to="/PatientEducation2">Zurück</v-btn>
+      <v-btn to="/PatientEducation2">Pause</v-btn>
+      <v-btn to="/PatientEducation2">Weiter</v-btn>
+    </v-row>
+    <div id="skipforward">
+      <v-chip
+          close
+          close-icon="mdi-skip-forward"
+          color="orange"
+          to="/PatientEducation2"
+          link
+          outlined
+      >weiter</v-chip>
+    </div>
   </div>
 </template>
 
@@ -26,6 +40,12 @@
   opacity: 0;
   transition: opacity 1s;
 }
+#skipforward {  /** the position (x,y,z) and size (heigth, with), as well as an initial opacity of 0.0, and the alignement of text
+    are defined. The 'transition' feature defines how quickly the overlaying "title screen" vanishes.**/
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
 </style>
 
 <script>
@@ -35,7 +55,13 @@ export default {
   data: function(){
     return {
       shared: store.state,
-      interval: ""
+      interval: "",
+      icons: [
+        'mdi-home',
+        'mdi-email',
+        'mdi-calendar',
+        'mdi-delete',
+      ],
     }
   },
   created: function () {

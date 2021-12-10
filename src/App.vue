@@ -1,4 +1,5 @@
 <template>
+  <!-- more icons may be found at: https://pictogrammers.github.io/@mdi/font/2.0.46/ /-->
   <v-app>
     <v-app-bar
         color="green"
@@ -38,6 +39,9 @@
             <v-list-item-icon>
               <v-icon>
                 mdi-home
+                <!-- other icons that maybe fit better:
+                  mdi-map
+                /-->
               </v-icon>
             </v-list-item-icon>
             <v-list-item-title>Übungsauswahl</v-list-item-title>
@@ -45,11 +49,13 @@
           <v-list-item @click="toTutorial">
             <v-list-item-icon>
               <v-icon>
-                mdi-book-open-variant
+                mdi-library
                 <!-- other icons that maybe fit better:
+                  mdi-book-open-variant
                   mdi-lightbulb-on-outline
                   mdi-lightbulb-outline
                   mdi-google-keep
+                  mdi-comment-question-outline
                 /-->
               </v-icon>
             </v-list-item-icon>
@@ -63,10 +69,15 @@
                 mdi-information-outline
                 mdi-information-variant
                 mdi-school
+                mdi-contacts
+                mdi-help-circle-outline
+                mdi-sign-text
               /-->
             </v-list-item-icon>
             <v-list-item-title>Wissen</v-list-item-title>
           </v-list-item>
+          <!-- Icons für mögliche weitere Menü-Punkte:
+              Statistik: mdi-chart-line /-->
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
