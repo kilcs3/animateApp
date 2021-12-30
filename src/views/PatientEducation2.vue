@@ -38,7 +38,7 @@ export default {
     }
   },
   created: function () {
-    this.shared.title = "Wissen";
+    this.shared.title = "Was sind Motor Imagery und Motor Observation?";
 
     /** After 1s, the second paragraph, descrTut, fades in.**/
     setTimeout(function() {

@@ -23,7 +23,7 @@
     ></base-timer>
     <div class="clearer"></div>
     <nav-buttons
-        :backLink="'/'"
+        :backLink="'/home'"
         :backText="'Zurück zur Übersicht'"
         :nextLink="'/exerciseMI/' + exercise.id"
         :nextText="'Weiter zum Vorstellen'"
@@ -61,7 +61,7 @@ export default {
     this.shared.title = "Beobachten";
     let exercise = store.getters.exercise(this.$route.params.id);
     if (!exercise) {
-      this.$router.push("/");
+      this.$router.push("/Home");
       return;
     }
     this.exercise = exercise

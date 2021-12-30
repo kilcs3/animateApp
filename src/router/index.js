@@ -8,11 +8,13 @@ import PatientEducation from "@/views/PatientEducation";
 import PatientEducation2 from "@/views/PatientEducation2";
 import Tutorial from "@/views/Tutorial";
 
+
 Vue.use(VueRouter)
 
 const routes = [
+
   {
-    path: '/',
+    path: '/home',
     name: 'Home',
     component: Home
   },
@@ -42,10 +44,11 @@ const routes = [
     component: PatientEducation2
   },
   {
-    path: '/tutorial/',
+    path: '/',
     name: 'tutorial',
     component: Tutorial
-  },
+  }
+
 ]
 
 const router = new VueRouter({

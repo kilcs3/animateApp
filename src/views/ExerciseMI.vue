@@ -51,7 +51,7 @@
       this.shared.title = "Vorstellen";
       let exercise = store.getters.exercise(this.$route.params.id);
       if (!exercise) {
-        this.$router.push("/");
+        this.$router.push("/Home");
         return;
       }
       this.exercise = exercise;
