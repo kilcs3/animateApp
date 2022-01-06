@@ -1,5 +1,5 @@
 <template>
-  <div class="margin">
+  <div class="margin container">
     <v-row>
       <v-spacer></v-spacer>
       <v-col
@@ -8,52 +8,77 @@
           :md="4"
           :lg="3"
       >
-        <p class="description" id="descrEdu">Wort <br>
-          in dieser App</p>
-        <p class="description" id="descrTut">Wie die App funktioniert</p>
+        <h3>Worum es in dieser App geht</h3>
       </v-col>
       <v-spacer></v-spacer>
     </v-row>
+    <div v-if="counter>0">
+
+      <v-row>
+        <v-img
+            :src="getImgUrl('Mentales Training.png')"
+            class="lighten-2"
+            height="250"
+            width="auto"
+            contain
+        />
+
+
+      </v-row>
+      <p class="text3">
+        Die Idee wie mentales Training im Sport
+      </p>
+    </div>
+
+    <div>
+      <v-btn class="button" v-on:click="count">
+        Weiter
+      </v-btn>
+    </div>
+
   </div>
+
 </template>
 
 <style scoped>
-.description {
-  margin-top: 25%;
+.text3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-#descrTut {  /** the initial opacity of 0.0. The 'transition' feature defines how quickly the overlaying "title screen" vanishes.**/
-  opacity: 1;
-  transition: opacity 1s;
+.container{
+  height: 87vh;
+  position: relative;
 }
+.button{
+  position: absolute;
+  bottom: 0;
+}
+
 </style>
 
 <script>
-const descrTut = document.getElementById("descrTut");
+
 import store from '@/store';
 export default {
-  name: "patientEducation",
-  data: function(){
+  name: "patientEducation2",
+  data: function () {
     return {
+      counter:0,
       shared: store.state
     }
   },
   created: function () {
-    this.shared.title = "Was sind Motor Imagery und Motor Observation?";
-
-    /** After 1s, the second paragraph, descrTut, fades in.**/
-    setTimeout(function() {
-      descrTut.style.opacity = 1;
-    }, 1000);
-
-    /** After 3s, move to the next screen.**/
-    setTimeout(function() {
-      this.$router.push("/PatientEducation2");
-    }, 3000);
-
-  },
-  beforeDestroy() {
-    clearTimeout(this.interval);
+    this.shared.title = "Mentales Training";},
+  methods: {
+    getImgUrl: function (pic) {
+      return require('@/assets/images/' + pic)
+    },
+    count:function (){
+      this.counter++
+      if (this.counter===2){
+        this.$router.push("/tutorial")
+      }
+    },
   }
 }
 </script>
-

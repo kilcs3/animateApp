@@ -53,7 +53,7 @@
                 /-->
               </v-icon>
             </v-list-item-icon>
-            <v-list-item-title>Wie funktioniert die App?</v-list-item-title>
+            <v-list-item-title>Funktionalität der App</v-list-item-title>
           </v-list-item>
           <v-list-item @click="toEducation">
             <v-list-item-icon>
@@ -65,7 +65,7 @@
                 mdi-school
               /-->
             </v-list-item-icon>
-            <v-list-item-title>Motorisches Training</v-list-item-title>
+            <v-list-item-title>Mentales Training</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>
@@ -92,11 +92,11 @@ import store from '@/store';
         this.$router.push("/Home");
       },
       toTutorial: function(){
-        this.$router.push("/");
+        this.$router.push("/tutorial");
       }
       ,
       toEducation: function(){
-        this.$router.push("/PatientEducation");
+        this.$router.push("/");
       }
     },
   };

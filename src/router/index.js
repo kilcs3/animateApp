@@ -34,7 +34,7 @@ const routes = [
     component: ExerciseFinished
   },
   {
-    path: '/patientEducation/',
+    path: '/',
     name: 'patientEducation',
     component: PatientEducation
   },
@@ -44,7 +44,7 @@ const routes = [
     component: PatientEducation2
   },
   {
-    path: '/',
+    path: '/tutorial/',
     name: 'tutorial',
     component: Tutorial
   }

@@ -1,5 +1,5 @@
 <template>
-  <div class="margin">
+  <div class="margin container">
     <v-row>
       <v-spacer></v-spacer>
       <v-col
@@ -8,52 +8,116 @@
           :md="4"
           :lg="3"
       >
-        <p class="description" id="descrEdu">Worum es geht <br>
-          in dieser App</p>
-        <p class="description" id="descrTut">Wie die App funktioniert</p>
+        <h3>Trainingstechniken erlernen</h3>
       </v-col>
       <v-spacer></v-spacer>
     </v-row>
+    <div v-if="counter>0">
+
+      <v-row>
+        <v-img
+            :src="getImgUrl('Beobachten.jpg')"
+            class="lighten-2"
+            height="100"
+            width="auto"
+            contain
+        />
+
+
+      </v-row>
+      <p class="text">
+        1. Übung beobachten
+      </p>
+    </div>
+    <v-spacer></v-spacer>
+    <div v-if="counter>1">
+
+      <v-row>
+        <v-img
+            :src="getImgUrl('Vorstellen.jpg')"
+            class="lighten-2"
+            height="100"
+            width="auto"
+            contain
+        />
+
+
+      </v-row>
+      <p class="text">
+        2. Übung sich vorstellen
+      </p>
+    </div>
+    <v-spacer></v-spacer>
+    <div v-if="counter>2">
+
+      <v-row>
+        <v-img
+            :src="getImgUrl('walkPicto.png')"
+            class="lighten-2"
+            height="100"
+            width="auto"
+            contain
+        />
+
+
+      </v-row>
+      <p class="text3">
+        3. Irgendwann Fähigkeit selber wieder erlangen
+      </p>
+    </div>
+    <div>
+      <v-btn class="button" v-on:click="count">
+        Weiter
+      </v-btn>
+    </div>
+
   </div>
+
 </template>
 
 <style scoped>
-.description {
-  margin-top: 25%;
+.text {
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
-#descrTut {  /** the initial opacity of 0.0. The 'transition' feature defines how quickly the overlaying "title screen" vanishes.**/
-  opacity: 1;
-  transition: opacity 1s;
+.text3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
+.container{
+  height: 87vh;
+  position: relative;
+}
+.button{
+  position: absolute;
+  bottom: 0;
+}
+
 </style>
 
 <script>
-const descrTut = document.getElementById("descrTut");
+
 import store from '@/store';
 export default {
   name: "patientEducation",
-  data: function(){
+  data: function () {
     return {
-      shared: store.state,
-      interval: ""
+      counter:0,
+      shared: store.state
     }
   },
   created: function () {
-    this.shared.title = "Motorisches Training";
-
-    /** After 1s, the second paragraph, descrTut, fades in.**/
-    setTimeout(function() {
-      descrTut.style.opacity = 1;
-    }, 1000);
-
-    /** After 3s, move to the next screen.**/
-    setTimeout(function() {
-      this.$router.push("/PatientEducation2");
-    }, 3000);
-
-  },
-  beforeDestroy() {
-    clearTimeout(this.interval);
+    this.shared.title = "Mentales Training";},
+  methods: {
+    getImgUrl: function (pic) {
+      return require('@/assets/images/' + pic)
+    },
+    count:function (){
+      this.counter++
+      if (this.counter===4){
+        this.$router.push("/PatientEducation2")
+      }
+    },
   }
 }
 </script>
