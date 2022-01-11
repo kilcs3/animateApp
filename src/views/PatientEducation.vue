@@ -10,7 +10,6 @@
       >
         <h3>Trainingstechniken erlernen</h3>
       </v-col>
-      <v-spacer></v-spacer>
     </v-row>
     <div v-if="counter>0">
 
