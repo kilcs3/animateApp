@@ -15,7 +15,7 @@
 
       <v-row>
         <v-img
-            :src="getImgUrl('homeBildschirm.jpg')"
+            :src="getImgUrl('beobachten_uebung.jpg')"
             class="lighten-2"
             height="400"
             width="auto"
@@ -25,8 +25,8 @@
 
       </v-row>
       <p class="text">
-        Hier sieht man das Menü der Übungsauswahl.
-        Wähle eine beliebige Übung aus indem du auf das jeweilige Bild klickst.
+        Beobachten Sie genau den jeweiligen Bewegungsablauf.
+        Die Uhr zeigt Ihnen an wie lange die Übung noch dauert.
       </p>
     </div>
     <v-spacer></v-spacer>
@@ -85,7 +85,7 @@ export default {
       return require('@/assets/images/' + pic)
     },
     navigate:function (){
-        this.$router.push("/Tutorial2")
+        this.$router.push("/Tutorial3")
     },
     goToHome:function (){
       this.$router.push("/Home")

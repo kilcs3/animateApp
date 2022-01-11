@@ -15,7 +15,7 @@
 
       <v-row>
         <v-img
-            :src="getImgUrl('homeBildschirm.jpg')"
+            :src="getImgUrl('vorstellung_uebung.jpg')"
             class="lighten-2"
             height="400"
             width="auto"
@@ -25,8 +25,9 @@
 
       </v-row>
       <p class="text">
-        Hier sieht man das Menü der Übungsauswahl.
-        Wähle eine beliebige Übung aus indem du auf das jeweilige Bild klickst.
+        Versuchen Sie sich den Bewegungsablauf bildlich vorzustellen.
+        Sie können auch gerne die Augen dafür schliessen.
+        Die Stoppuhr zeigt Ihnen an wie lange diese Übung dauert.
       </p>
     </div>
     <v-spacer></v-spacer>
@@ -85,7 +86,7 @@ export default {
       return require('@/assets/images/' + pic)
     },
     navigate:function (){
-        this.$router.push("/Tutorial2")
+        this.$router.push("/Tutorial4")
     },
     goToHome:function (){
       this.$router.push("/Home")

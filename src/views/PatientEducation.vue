@@ -66,9 +66,14 @@
       </p>
     </div>
     <div>
+      <v-row align-content="space-between">
       <v-btn class="button" v-on:click="count">
         Weiter
       </v-btn>
+        <v-btn class="button2" v-on:click="goToHome">
+          Überspringen
+        </v-btn>
+      </v-row>
     </div>
 
   </div>
@@ -90,8 +95,15 @@
 }
 .button{
   position: absolute;
+  right: 30px;
   bottom: 0;
 }
+.button2{
+  position: absolute;
+  left: 30px;
+  bottom: 0;
+}
+
 
 </style>
 
@@ -118,6 +130,9 @@ export default {
         this.$router.push("/PatientEducation2")
       }
     },
+    goToHome:function (){
+      this.$router.push("/Home")
+    }
   }
 }
 </script>

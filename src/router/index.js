@@ -7,6 +7,9 @@ import ExerciseFinished from "@/views/ExerciseFinished";
 import PatientEducation from "@/views/PatientEducation";
 import PatientEducation2 from "@/views/PatientEducation2";
 import Tutorial from "@/views/Tutorial";
+import Tutorial2 from "@/views/Tutorial2";
+import Tutorial3 from "@/views/Tutorial3";
+import Tutorial4 from "@/views/Tutorial4";
 
 
 Vue.use(VueRouter)
@@ -47,6 +50,21 @@ const routes = [
     path: '/tutorial/',
     name: 'tutorial',
     component: Tutorial
+  },
+  {
+    path: '/tutorial2/',
+    name: 'tutorial2',
+    component: Tutorial2
+  },
+  {
+    path: '/tutorial3/',
+    name: 'tutorial3',
+    component: Tutorial3
+  },
+  {
+    path: '/tutorial4/',
+    name: 'tutorial4',
+    component: Tutorial4
   }
 
 ]

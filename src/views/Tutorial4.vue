@@ -15,7 +15,7 @@
 
       <v-row>
         <v-img
-            :src="getImgUrl('homeBildschirm.jpg')"
+            :src="getImgUrl('uebung_ende.jpg')"
             class="lighten-2"
             height="400"
             width="auto"
@@ -25,8 +25,7 @@
 
       </v-row>
       <p class="text">
-        Hier sieht man das Menü der Übungsauswahl.
-        Wähle eine beliebige Übung aus indem du auf das jeweilige Bild klickst.
+        Hier können Sie wieder zurück in die Übungsauswahl gelangen.
       </p>
     </div>
     <v-spacer></v-spacer>
@@ -85,7 +84,7 @@ export default {
       return require('@/assets/images/' + pic)
     },
     navigate:function (){
-        this.$router.push("/Tutorial2")
+        this.$router.push("/Home")
     },
     goToHome:function (){
       this.$router.push("/Home")
