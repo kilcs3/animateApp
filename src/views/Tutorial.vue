@@ -26,7 +26,7 @@
       </v-row>
       <p class="text">
         Hier sieht man das Menü der Übungsauswahl.
-        Wähle eine beliebige Übung aus indem du auf das jeweilige Bild klickst.
+        Wählen Sie eine beliebige Übung aus indem Sie auf das jeweilige Bild klicken.
       </p>
     </div>
     <v-spacer></v-spacer>
