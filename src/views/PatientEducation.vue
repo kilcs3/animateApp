@@ -66,10 +66,10 @@
     </div>
     <div>
       <v-row align-content="space-between">
-      <v-btn class="button" v-on:click="count">
+      <v-btn class="buttonProceed" v-on:click="count">
         Weiter
       </v-btn>
-        <v-btn class="button2" v-on:click="goToHome">
+        <v-btn class="buttonSkip" v-on:click="goToHome">
           Überspringen
         </v-btn>
       </v-row>
@@ -92,12 +92,12 @@
   height: 87vh;
   position: relative;
 }
-.button{
+.buttonProceed{
   position: absolute;
   right: 30px;
   bottom: 0;
 }
-.button2{
+.buttonSkip{
   position: absolute;
   left: 30px;
   bottom: 0;
