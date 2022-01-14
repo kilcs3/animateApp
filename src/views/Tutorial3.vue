@@ -25,9 +25,8 @@
 
       </v-row>
       <p class="text">
-        Versuchen Sie sich den Bewegungsablauf bildlich vorzustellen.
-        Sie können auch gerne die Augen dafür schliessen.
-        Die Stoppuhr zeigt Ihnen an wie lange diese Übung dauert.
+        Versuchen Sie sich vorzustellen, sie würden die Bewegung machen. <br>
+        Dafür können Sie gerne die Augen schliessen. Nach Ablauf der Übung ertönt ein Signal.
       </p>
     </div>
     <v-spacer></v-spacer>
@@ -38,7 +37,7 @@
           Weiter
         </v-btn>
         <v-btn class="buttonSkip" v-on:click="goToHome" x-small>
-          Eine Übung starten
+          Direkt zur Übungsauswahl
         </v-btn>
       </v-row>
     </div>

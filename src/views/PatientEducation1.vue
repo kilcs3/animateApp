@@ -10,6 +10,7 @@
       >
         <h3>Trainingstechniken erlernen</h3>
       </v-col>
+      <v-spacer></v-spacer>
     </v-row>
     <div v-if="counter>0">
 
@@ -61,7 +62,7 @@
 
       </v-row>
       <p class="text3">
-        3. Irgendwann Fähigkeit selber wieder erlangen
+        3. Irgendwann: Fähigkeit selber wieder erlangen
       </p>
     </div>
     <div>
@@ -70,7 +71,7 @@
         Weiter
       </v-btn>
         <v-btn class="buttonSkip" v-on:click="goToHome" x-small>
-          Eine Übung starten
+          Direkt zur Übungsauswahl
         </v-btn>
       </v-row>
     </div>

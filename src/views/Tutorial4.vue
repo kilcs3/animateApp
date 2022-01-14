@@ -25,7 +25,7 @@
 
       </v-row>
       <p class="text">
-        Hier können Sie wieder zurück in die Übungsauswahl gelangen.
+        Nach Beendigung von Beobachten und Vorstellen können Sie zurück zur Übungsauswahl gelangen.
       </p>
     </div>
     <v-spacer></v-spacer>
@@ -33,10 +33,7 @@
     <div>
       <v-row align-content="space-between">
         <v-btn class="buttonProceed" v-on:click="navigate">
-          Weiter
-        </v-btn>
-        <v-btn class="buttonSkip" v-on:click="goToHome" x-small>
-          Eine Übung starten
+          Zur Übungsauswahl
         </v-btn>
       </v-row>
     </div>
@@ -57,11 +54,6 @@
 .buttonProceed{
   position: absolute;
   right: 30px;
-  bottom: 0;
-}
-.buttonSkip{
-  position: absolute;
-  left: 30px;
   bottom: 0;
 }
 
@@ -85,9 +77,6 @@ export default {
     },
     navigate:function (){
         this.$router.push("/Home")
-    },
-    goToHome:function (){
-      this.$router.push("/Home")
     }
   }
 }

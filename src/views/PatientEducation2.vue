@@ -26,7 +26,7 @@
 
       </v-row>
       <p class="text3">
-        Die Idee wie mentales Training im Sport
+        Die Idee: wie mentales Trainieren z.B. im Sport
       </p>
     </div>
 
@@ -35,8 +35,12 @@
         <v-btn class="buttonProceed" v-on:click="count" id="btnProceed">
           Weiter
         </v-btn>
+      </v-row>
+    </div>
+    <div>
+      <v-row>
         <v-btn class="buttonSkip" v-on:click="goToHome" x-small>
-          Eine Übung starten
+          Direkt zur Übungsauswahl
         </v-btn>
       </v-row>
     </div>

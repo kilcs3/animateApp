@@ -25,8 +25,8 @@
 
       </v-row>
       <p class="text">
-        Hier sieht man das Menü der Übungsauswahl.
-        Wählen Sie eine beliebige Übung aus indem Sie auf das jeweilige Bild klicken.
+        Das ist die Übungsauswahl-Seite. <br>
+        Dort können Sie Übung auswählen, indem Sie auf ein Bild klicken.
       </p>
     </div>
     <v-spacer></v-spacer>
@@ -37,7 +37,7 @@
           Weiter
         </v-btn>
         <v-btn class="buttonSkip" v-on:click="goToHome" x-small>
-          Eine Übung starten
+          Direkt zur Übungsauswahl
         </v-btn>
       </v-row>
     </div>

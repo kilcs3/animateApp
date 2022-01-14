@@ -25,8 +25,8 @@
 
       </v-row>
       <p class="text">
-        Beobachten Sie genau den jeweiligen Bewegungsablauf.
-        Die Uhr zeigt Ihnen an wie lange die Übung noch dauert.
+        Beobachten Sie den gewählten Bewegungsablauf eingehend. <br>
+        Die Uhr zeigt Ihnen an, wie lange die Übung noch dauert.
       </p>
     </div>
     <v-spacer></v-spacer>
@@ -37,7 +37,7 @@
           Weiter
         </v-btn>
         <v-btn class="buttonSkip" v-on:click="goToHome" x-small>
-          Eine Übung starten
+          Direkt zur Übungsauswahl
         </v-btn>
       </v-row>
     </div>
