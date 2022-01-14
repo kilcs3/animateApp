@@ -15,7 +15,7 @@
 
       <v-row>
         <v-img
-            :src="getImgUrl('homeBildschirm.jpg')"
+            :src="getImgUrl('Tut_1homeBildschirm.jpg')"
             class="lighten-2"
             height="400"
             width="auto"

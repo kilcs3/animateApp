@@ -15,7 +15,7 @@
 
       <v-row>
         <v-img
-            :src="getImgUrl('Beobachten.jpg')"
+            :src="getImgUrl('PatEd1_CartoonBeobachten.jpg')"
             class="lighten-2"
             height="100"
             width="auto"
@@ -33,7 +33,7 @@
 
       <v-row>
         <v-img
-            :src="getImgUrl('Vorstellen.jpg')"
+            :src="getImgUrl('PatEd_1CartoonVorstellen.jpg')"
             class="lighten-2"
             height="100"
             width="auto"
@@ -51,7 +51,7 @@
 
       <v-row>
         <v-img
-            :src="getImgUrl('walkPicto.png')"
+            :src="getImgUrl('PatEd_1CartoonWalk.png')"
             class="lighten-2"
             height="100"
             width="auto"

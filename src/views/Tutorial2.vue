@@ -15,7 +15,7 @@
 
       <v-row>
         <v-img
-            :src="getImgUrl('beobachten_uebung.jpg')"
+            :src="getImgUrl('Tut_2beobachten_uebung.jpg')"
             class="lighten-2"
             height="400"
             width="auto"

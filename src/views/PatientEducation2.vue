@@ -16,7 +16,7 @@
 
       <v-row>
         <v-img
-            :src="getImgUrl('Mentales Training.png')"
+            :src="getImgUrl('PatEd2.png')"
             class="lighten-2"
             height="250"
             width="auto"
