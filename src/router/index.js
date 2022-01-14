@@ -4,9 +4,9 @@ import Home from '../views/Home.vue'
 import ExerciseAO from "@/views/ExerciseAO";
 import ExerciseMI from "@/views/ExerciseMI";
 import ExerciseFinished from "@/views/ExerciseFinished";
-import PatientEducation from "@/views/PatientEducation";
+import patientEducation1 from "@/views/PatientEducation1";
 import PatientEducation2 from "@/views/PatientEducation2";
-import Tutorial from "@/views/Tutorial";
+import Tutorial1 from "@/views/Tutorial1";
 import Tutorial2 from "@/views/Tutorial2";
 import Tutorial3 from "@/views/Tutorial3";
 import Tutorial4 from "@/views/Tutorial4";
@@ -38,8 +38,8 @@ const routes = [
   },
   {
     path: '/',
-    name: 'patientEducation',
-    component: PatientEducation
+    name: 'patientEducation1',
+    component: patientEducation1
   },
   {
     path: '/patientEducation2/',
@@ -47,9 +47,9 @@ const routes = [
     component: PatientEducation2
   },
   {
-    path: '/tutorial/',
-    name: 'tutorial',
-    component: Tutorial
+    path: '/tutorial1/',
+    name: 'tutorial1',
+    component: Tutorial1
   },
   {
     path: '/tutorial2/',

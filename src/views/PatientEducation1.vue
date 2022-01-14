@@ -69,8 +69,8 @@
       <v-btn class="buttonProceed" v-on:click="count">
         Weiter
       </v-btn>
-        <v-btn class="buttonSkip" v-on:click="goToHome">
-          Überspringen
+        <v-btn class="buttonSkip" v-on:click="goToHome" x-small>
+          Eine Übung starten
         </v-btn>
       </v-row>
     </div>
@@ -110,7 +110,7 @@
 
 import store from '@/store';
 export default {
-  name: "patientEducation",
+  name: "patientEducation1",
   data: function () {
     return {
       counter:0,
@@ -118,7 +118,7 @@ export default {
     }
   },
   created: function () {
-    this.shared.title = "Mentales Training";},
+    this.shared.title = "Wissen: Mentales Trainieren";},
   methods: {
     getImgUrl: function (pic) {
       return require('@/assets/images/' + pic)

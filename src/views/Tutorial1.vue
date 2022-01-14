@@ -36,8 +36,8 @@
         <v-btn class="buttonProceed" v-on:click="navigate">
           Weiter
         </v-btn>
-        <v-btn class="buttonSkip" v-on:click="goToHome">
-          Überspringen
+        <v-btn class="buttonSkip" v-on:click="goToHome" x-small>
+          Eine Übung starten
         </v-btn>
       </v-row>
     </div>
@@ -79,7 +79,7 @@ export default {
     }
   },
   created: function () {
-    this.shared.title = "Tutorial";},
+    this.shared.title = "App-Handbuch";},
   methods: {
     getImgUrl: function (pic) {
       return require('@/assets/images/' + pic)

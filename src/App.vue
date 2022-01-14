@@ -59,7 +59,7 @@
                 /-->
               </v-icon>
             </v-list-item-icon>
-            <v-list-item-title>Funktionalität der App</v-list-item-title>
+            <v-list-item-title>App-Handbuch</v-list-item-title>
           </v-list-item>
           <v-list-item @click="toEducation">
             <v-list-item-icon>
@@ -74,7 +74,7 @@
                 mdi-sign-text
               /-->
             </v-list-item-icon>
-            <v-list-item-title>Mentales Training</v-list-item-title>
+            <v-list-item-title>Übungstechnik</v-list-item-title>
           </v-list-item>
           <!-- Icons für mögliche weitere Menü-Punkte:
               Statistik: mdi-chart-line /-->
@@ -103,7 +103,7 @@ import store from '@/store';
         this.$router.push("/Home");
       },
       toTutorial: function(){
-        this.$router.push("/tutorial");
+        this.$router.push("/tutorial1");
       }
       ,
       toEducation: function(){

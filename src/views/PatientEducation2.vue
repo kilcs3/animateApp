@@ -32,11 +32,11 @@
 
     <div>
       <v-row align-content="space-between">
-        <v-btn class="buttonProceed" v-on:click="count">
+        <v-btn class="buttonProceed" v-on:click="count" id="btnProceed">
           Weiter
         </v-btn>
-        <v-btn class="buttonSkip" v-on:click="goToHome">
-          Überspringen
+        <v-btn class="buttonSkip" v-on:click="goToHome" x-small>
+          Eine Übung starten
         </v-btn>
       </v-row>
     </div>
@@ -79,15 +79,18 @@ export default {
     }
   },
   created: function () {
-    this.shared.title = "Mentales Training";},
+    this.shared.title = "Wissen: Mentales Trainieren";},
   methods: {
     getImgUrl: function (pic) {
       return require('@/assets/images/' + pic)
     },
     count:function (){
       this.counter++
-      if (this.counter===2){
-        this.$router.push("/tutorial")
+      if (this.counter===1){
+        document.getElementById("btnProceed").innerText ="Zum Handbuch"
+      }
+      else if (this.counter===2){
+        this.$router.push("/tutorial1")
       }
     },
     goToHome:function (){
