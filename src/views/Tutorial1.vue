@@ -33,11 +33,11 @@
 
     <div>
       <v-row align-content="space-between">
-        <v-btn class="buttonProceed" v-on:click="navigate">
+        <v-btn class="buttonProceed" v-on:click="navigate" color="green">
           Weiter
         </v-btn>
-        <v-btn class="buttonSkip" v-on:click="goToHome" x-small>
-          Direkt zur Übungsauswahl
+        <v-btn class="buttonSkip" v-on:click="goToHome">
+           Direkt zur <br> Übungsauswahl
         </v-btn>
       </v-row>
     </div>

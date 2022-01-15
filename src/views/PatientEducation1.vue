@@ -67,11 +67,11 @@
     </div>
     <div>
       <v-row align-content="space-between">
-      <v-btn class="buttonProceed" v-on:click="count">
+      <v-btn class="buttonProceed" v-on:click="count" color="green">
         Weiter
       </v-btn>
-        <v-btn class="buttonSkip" v-on:click="goToHome" x-small>
-          Direkt zur Übungsauswahl
+        <v-btn class="buttonSkip" v-on:click="goToHome">
+          Direkt zur <br> Übungsauswahl
         </v-btn>
       </v-row>
     </div>
@@ -83,7 +83,7 @@
 <style scoped>
 .text {
   margin-top: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 35px;
 }
 .text3 {
   margin-top: 20px;
@@ -103,6 +103,9 @@
   left: 30px;
   bottom: 0;
 }
+h3{
+  margin-bottom: 15px;
+}
 
 
 </style>
@@ -119,7 +122,7 @@ export default {
     }
   },
   created: function () {
-    this.shared.title = "Wissen: Mentales Trainieren";},
+    this.shared.title = "Übungstechnik";},
   methods: {
     getImgUrl: function (pic) {
       return require('@/assets/images/' + pic)

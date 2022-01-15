@@ -18,7 +18,7 @@
         <v-img
             :src="getImgUrl('PatEd2.png')"
             class="lighten-2"
-            height="250"
+            height="300"
             width="auto"
             contain
         />
@@ -32,15 +32,15 @@
 
     <div>
       <v-row align-content="space-between">
-        <v-btn class="buttonProceed" v-on:click="count" id="btnProceed">
+        <v-btn class="buttonProceed" v-on:click="count" id="btnProceed" color="green">
           Weiter
         </v-btn>
       </v-row>
     </div>
     <div>
       <v-row>
-        <v-btn class="buttonSkip" v-on:click="goToHome" x-small>
-          Direkt zur Übungsauswahl
+        <v-btn class="buttonSkip" v-on:click="goToHome">
+          Direkt zur <br> Übungsauswahl
         </v-btn>
       </v-row>
     </div>
@@ -51,7 +51,7 @@
 
 <style scoped>
 .text3 {
-  margin-top: 20px;
+  margin-top: 35px;
   margin-bottom: 20px;
 }
 .container{
@@ -68,6 +68,9 @@
   left: 30px;
   bottom: 0;
 }
+h3{
+  margin-bottom: 25px;
+}
 
 </style>
 
@@ -83,7 +86,7 @@ export default {
     }
   },
   created: function () {
-    this.shared.title = "Wissen: Mentales Trainieren";},
+    this.shared.title = "Übungstechnik";},
   methods: {
     getImgUrl: function (pic) {
       return require('@/assets/images/' + pic)
@@ -91,7 +94,7 @@ export default {
     count:function (){
       this.counter++
       if (this.counter===1){
-        document.getElementById("btnProceed").innerText ="Zum Handbuch"
+        document.getElementById("btnProceed").innerText ="Handbuch"
       }
       else if (this.counter===2){
         this.$router.push("/tutorial1")

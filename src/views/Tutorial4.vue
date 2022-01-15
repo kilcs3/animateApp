@@ -32,7 +32,7 @@
 
     <div>
       <v-row align-content="space-between">
-        <v-btn class="buttonProceed" v-on:click="navigate">
+        <v-btn class="buttonProceed" v-on:click="navigate" color="green">
           Zur Übungsauswahl
         </v-btn>
       </v-row>
@@ -44,7 +44,7 @@
 
 <style scoped>
 .text {
-  margin-top: 20px;
+  margin-top: 35px;
   margin-bottom: 50px;
 }
 .container{
