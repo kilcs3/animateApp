@@ -13,7 +13,10 @@
       <v-spacer></v-spacer>
     </v-row>
     <div v-if="counter>0">
-
+      <!--
+       Image for Patient Education
+           If you click on the button the counter will be set to 1
+           /-->
       <v-row>
         <v-img
             :src="getImgUrl('PatEd2.png')"

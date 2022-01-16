@@ -13,7 +13,10 @@
       <v-spacer></v-spacer>
     </v-row>
     <div v-if="counter>0">
-
+      <!--
+      Images for Patient Education
+      If you click on the button the counter will be set to 1
+      /-->
       <v-row>
         <v-img
             :src="getImgUrl('PatEd1_CartoonBeobachten.jpg')"
@@ -32,6 +35,10 @@
     <v-spacer></v-spacer>
     <div v-if="counter>1">
 
+      <!--
+      Images for Patient Education
+      If you click on the button the counter will be set to 2
+      /-->
       <v-row>
         <v-img
             :src="getImgUrl('PatEd_1CartoonVorstellen.jpg')"
@@ -49,7 +56,10 @@
     </div>
     <v-spacer></v-spacer>
     <div v-if="counter>2">
-
+      <!--
+    Images for Patient Education
+    If you click on the button the counter will be set to 3
+    /-->
       <v-row>
         <v-img
             :src="getImgUrl('PatEd_1CartoonWalk.png')"
