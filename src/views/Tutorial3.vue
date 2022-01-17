@@ -8,27 +8,30 @@
           :md="4"
           :lg="3"
       >
+        <div>
+
+          <v-row>
+            <v-img
+                :src="getImgUrl('Tut_3vorstellung_uebung.jpg')"
+                class="lighten-2"
+                height="360"
+                width="auto"
+                contain
+            />
+
+
+          </v-row>
+          <p class="text">
+            Versuchen Sie sich vorzustellen, Sie würden die Bewegung machen.
+          </p>
+          <p class="textSmall">
+              Sie können dafür die Augen schliessen. Nach Ablauf der Übung ertönt ein Signal.
+          </p>
+        </div>
       </v-col>
       <v-spacer></v-spacer>
     </v-row>
-    <div>
 
-      <v-row>
-        <v-img
-            :src="getImgUrl('Tut_3vorstellung_uebung.jpg')"
-            class="lighten-2"
-            height="400"
-            width="auto"
-            contain
-        />
-
-
-      </v-row>
-      <p class="text">
-        Versuchen Sie sich vorzustellen, sie würden die Bewegung machen. <br>
-        Dafür können Sie gerne die Augen schliessen. Nach Ablauf der Übung ertönt ein Signal.
-      </p>
-    </div>
     <v-spacer></v-spacer>
 
     <div>
@@ -49,7 +52,12 @@
 <style scoped>
 .text {
   margin-top: 20px;
+  margin-bottom: 0.2em;
+}
+.textSmall {
+  margin-top: 0.2em;
   margin-bottom: 50px;
+  font-size: 0.8em;
 }
 .container{
   height: 87vh;

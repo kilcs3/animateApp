@@ -9,72 +9,72 @@
           :lg="3"
       >
         <h3>Trainingstechniken erlernen</h3>
+        <div v-if="counter>0">
+          <!--
+          Images for Patient Education
+          If you click on the button the counter will be set to 1
+          /-->
+          <v-row>
+            <v-img
+                :src="getImgUrl('PatEd1_CartoonBeobachten.jpg')"
+                class="lighten-2"
+                height="90"
+                width="auto"
+                contain
+            />
+
+
+          </v-row>
+          <p class="text">
+            1. Übung beobachten
+          </p>
+        </div>
+        <v-spacer></v-spacer>
+        <div v-if="counter>1">
+
+          <!--
+          Images for Patient Education
+          If you click on the button the counter will be set to 2
+          /-->
+          <v-row>
+            <v-img
+                :src="getImgUrl('PatEd_1CartoonVorstellen.jpg')"
+                class="lighten-2"
+                height="90"
+                width="auto"
+                contain
+            />
+
+
+          </v-row>
+          <p class="text">
+            2. Übung sich vorstellen
+          </p>
+        </div>
+        <v-spacer></v-spacer>
+        <div v-if="counter>2">
+          <!--
+        Images for Patient Education
+        If you click on the button the counter will be set to 3
+        /-->
+          <v-row>
+            <v-img
+                :src="getImgUrl('PatEd_1CartoonWalk.png')"
+                class="lighten-2"
+                height="90"
+                width="auto"
+                contain
+            />
+
+
+          </v-row>
+          <p class="text3">
+            3. Irgendwann: Fähigkeit selber wieder erlangen
+          </p>
+        </div>
       </v-col>
       <v-spacer></v-spacer>
     </v-row>
-    <div v-if="counter>0">
-      <!--
-      Images for Patient Education
-      If you click on the button the counter will be set to 1
-      /-->
-      <v-row>
-        <v-img
-            :src="getImgUrl('PatEd1_CartoonBeobachten.jpg')"
-            class="lighten-2"
-            height="100"
-            width="auto"
-            contain
-        />
-
-
-      </v-row>
-      <p class="text">
-        1. Übung beobachten
-      </p>
-    </div>
-    <v-spacer></v-spacer>
-    <div v-if="counter>1">
-
-      <!--
-      Images for Patient Education
-      If you click on the button the counter will be set to 2
-      /-->
-      <v-row>
-        <v-img
-            :src="getImgUrl('PatEd_1CartoonVorstellen.jpg')"
-            class="lighten-2"
-            height="100"
-            width="auto"
-            contain
-        />
-
-
-      </v-row>
-      <p class="text">
-        2. Übung sich vorstellen
-      </p>
-    </div>
-    <v-spacer></v-spacer>
-    <div v-if="counter>2">
-      <!--
-    Images for Patient Education
-    If you click on the button the counter will be set to 3
-    /-->
-      <v-row>
-        <v-img
-            :src="getImgUrl('PatEd_1CartoonWalk.png')"
-            class="lighten-2"
-            height="100"
-            width="auto"
-            contain
-        />
-
-
-      </v-row>
-      <p class="text3">
-        3. Irgendwann: Fähigkeit selber wieder erlangen
-      </p>
-    </div>
     <div>
       <v-row align-content="space-between">
       <v-btn class="buttonProceed" v-on:click="count" color="green">

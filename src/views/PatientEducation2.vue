@@ -9,37 +9,37 @@
           :lg="3"
       >
         <h3>Worum es in dieser App geht</h3>
+        <div v-if="counter>0">
+          <!--
+           Image for Patient Education
+               If you click on the button the counter will be set to 1
+               /-->
+          <v-row>
+            <v-img
+                :src="getImgUrl('PatEd2.png')"
+                class="lighten-2"
+                height="300"
+                width="auto"
+                contain
+            />
+
+
+          </v-row>
+          <p class="text3">
+            Die Idee: wie mentales Trainieren z.B. im Sport
+          </p>
+        </div>
+
+        <div>
+          <v-row align-content="space-between">
+            <v-btn class="buttonProceed" v-on:click="count" id="btnProceed" color="green">
+              Weiter
+            </v-btn>
+          </v-row>
+        </div>
       </v-col>
       <v-spacer></v-spacer>
     </v-row>
-    <div v-if="counter>0">
-      <!--
-       Image for Patient Education
-           If you click on the button the counter will be set to 1
-           /-->
-      <v-row>
-        <v-img
-            :src="getImgUrl('PatEd2.png')"
-            class="lighten-2"
-            height="300"
-            width="auto"
-            contain
-        />
-
-
-      </v-row>
-      <p class="text3">
-        Die Idee: wie mentales Trainieren z.B. im Sport
-      </p>
-    </div>
-
-    <div>
-      <v-row align-content="space-between">
-        <v-btn class="buttonProceed" v-on:click="count" id="btnProceed" color="green">
-          Weiter
-        </v-btn>
-      </v-row>
-    </div>
     <div>
       <v-row>
         <v-btn class="buttonSkip" v-on:click="goToHome" x-small>

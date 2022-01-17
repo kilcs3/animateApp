@@ -8,27 +8,27 @@
           :md="4"
           :lg="3"
       >
+        <div>
+
+          <v-row>
+            <v-img
+                :src="getImgUrl('Tut_2beobachten_uebung.jpg')"
+                class="lighten-2"
+                height="360"
+                width="auto"
+                contain
+            />
+
+
+          </v-row>
+          <p class="text">
+            Beobachten Sie den gewählten Bewegungsablauf eingehend. <br>
+            Die Uhr zeigt Ihnen an, wie lange die Übung noch dauert.
+          </p>
+        </div>
       </v-col>
       <v-spacer></v-spacer>
     </v-row>
-    <div>
-
-      <v-row>
-        <v-img
-            :src="getImgUrl('Tut_2beobachten_uebung.jpg')"
-            class="lighten-2"
-            height="400"
-            width="auto"
-            contain
-        />
-
-
-      </v-row>
-      <p class="text">
-        Beobachten Sie den gewählten Bewegungsablauf eingehend. <br>
-        Die Uhr zeigt Ihnen an, wie lange die Übung noch dauert.
-      </p>
-    </div>
     <v-spacer></v-spacer>
 
     <div>

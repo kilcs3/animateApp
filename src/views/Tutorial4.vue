@@ -8,26 +8,27 @@
           :md="4"
           :lg="3"
       >
+        <div>
+
+          <v-row>
+            <v-img
+                :src="getImgUrl('Tut_4uebung_ende.jpg')"
+                class="lighten-2"
+                height="320"
+                width="auto"
+                contain
+            />
+
+
+          </v-row>
+          <p class="text">
+            Nach Beendigung von Beobachten und Vorstellen können Sie zurück zur Übungsauswahl gelangen.
+          </p>
+        </div>
       </v-col>
       <v-spacer></v-spacer>
     </v-row>
-    <div>
 
-      <v-row>
-        <v-img
-            :src="getImgUrl('Tut_4uebung_ende.jpg')"
-            class="lighten-2"
-            height="350"
-            width="auto"
-            contain
-        />
-
-
-      </v-row>
-      <p class="text">
-        Nach Beendigung von Beobachten und Vorstellen können Sie zurück zur Übungsauswahl gelangen.
-      </p>
-    </div>
     <v-spacer></v-spacer>
 
     <div>
