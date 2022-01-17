@@ -22,7 +22,7 @@
 
           </v-row>
           <p class="text">
-            Versuchen Sie sich vorzustellen, Sie würden die Bewegung machen.
+            Versuchen Sie sich vorzustellen, <i>Sie</i> würden die Bewegung machen.
           </p>
           <p class="textSmall">
               Sie können dafür die Augen schliessen. Nach Ablauf der Übung ertönt ein Signal.
@@ -51,8 +51,9 @@
 
 <style scoped>
 .text {
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 0.2em;
+  font-size: 0.95em;
 }
 .textSmall {
   margin-top: 0.2em;
