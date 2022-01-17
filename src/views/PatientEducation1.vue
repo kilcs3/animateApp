@@ -80,7 +80,7 @@
       <v-btn class="buttonProceed" v-on:click="count" color="green">
         Weiter
       </v-btn>
-        <v-btn class="buttonSkip" v-on:click="goToHome">
+        <v-btn class="buttonSkip" v-on:click="goToHome" x-small>
           Direkt zur <br> Übungsauswahl
         </v-btn>
       </v-row>
