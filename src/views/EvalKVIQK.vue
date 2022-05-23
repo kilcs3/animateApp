@@ -36,6 +36,8 @@
       </v-col>
       <v-spacer></v-spacer>
     </v-row>
+    <div class="clearer"></div>
+    
     <v-row>
       <v-spacer></v-spacer>
       <v-col
@@ -44,23 +46,23 @@
           :md="4"
           :lg="3"
       >
-        <v-btn
-            width="100%"
-            x-large
-            @click="back"
-        >
-          <v-icon>mdi-checkbox-marked-circle-outline</v-icon>
-          <div class="margin text-transform-none">Bestätigen</div>
-        </v-btn>
+        
       </v-col>
       <v-spacer></v-spacer>
     </v-row>
+    <nav-buttons
+      :backLink="'/exerciseKVIQK/' + kExercise.id"
+      :backText="'Zurück zur Übung'"
+      :nextLink="'/kinestheticKVIQ/'"
+      :nextText="'Bestätigen'"
+      class="margin"
+    ></nav-buttons>
   </div>
 </template>
 
 <script>
   import store from '@/store';
-
+  import NavigationButtons from "@/components/NavigationButtons";
   export default {
     name: "evalKVIQK",
     data: function(){
@@ -68,9 +70,15 @@
         shared: store.state2
       }
     },
+    components: {
+      'nav-buttons': NavigationButtons,
+    },
     methods: {
-      back: function(){
+      submit: function(){
         this.$router.push("/kinestheticKVIQ");
+      },
+      goBack: function (){
+        this.$router.push("/ExerciseKVIQK/" + this.kExercise.id)
       },
       onChange(event) {
         var optionText = event.target.value;
@@ -103,5 +111,10 @@
 <style scoped>
   .bewertung {
     border: none;
+  }
+  .buttonBack{
+  position: absolute;
+  left: 30px;
+  bottom: 0;
   }
 </style>

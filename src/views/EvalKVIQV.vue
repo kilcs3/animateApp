@@ -44,23 +44,22 @@
           :md="4"
           :lg="3"
       >
-        <v-btn
-            width="100%"
-            x-large
-            @click="back"
-        >
-          <v-icon>mdi-checkbox-marked-circle-outline</v-icon>
-          <div class="margin text-transform-none">Bestätigen</div>
-        </v-btn>
       </v-col>
       <v-spacer></v-spacer>
     </v-row>
+    <nav-buttons
+      :backLink="'/exerciseKVIQV/' + vExercise.id"
+      :backText="'Zurück zur Übung'"
+      :nextLink="'/visualKVIQ/'"
+      :nextText="'Bestätigen'"
+      class="margin"
+    ></nav-buttons>
   </div>
 </template>
 
 <script>
   import store from '@/store';
-
+  import NavigationButtons from "@/components/NavigationButtons";
   export default {
     name: "evalKVIQV",
     data: function(){
@@ -68,10 +67,10 @@
         shared: store.state2
       }
     },
+    components: {
+      'nav-buttons': NavigationButtons,
+    },
     methods: {
-      back: function(){
-        this.$router.push("/visualKVIQ");
-      },
       onChange(event) {
         var optionText = event.target.value;
         let data = [
