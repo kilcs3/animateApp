@@ -42,7 +42,7 @@ export default {
   },
   created: function () {
     this.shared.title = "Wissen";
-
+    
     this.interval = setTimeout(
         function () {
           document.getElementById("descrTut").style.opacity = 1;

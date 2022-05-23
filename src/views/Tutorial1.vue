@@ -22,8 +22,8 @@
 
           </v-row>
           <p class="text">
-            Das ist die Übungsauswahl-Seite. <br>
-            Dort können Sie Übung auswählen, indem Sie auf ein Bild klicken.
+            Das ist die Übungsauswahl. <br>
+            Dort können Sie eine Übung auswählen, indem Sie auf ein Bild klicken.
           </p>
         </div>
       </v-col>
@@ -34,10 +34,10 @@
 
     <div>
       <v-row align-content="space-between">
-        <v-btn class="buttonProceed" v-on:click="navigate" color="green">
+        <v-btn class="buttonProceed" v-on:click="navigate(); stopAudio()" color="green">
           Weiter
         </v-btn>
-        <v-btn class="buttonSkip" v-on:click="goToHome" x-small>
+        <v-btn class="buttonSkip" v-on:click="goToHome(); stopAudio()" x-small>
            Direkt zur <br> Übungsauswahl
         </v-btn>
       </v-row>
@@ -76,11 +76,14 @@ export default {
   name: "Tutorial",
   data: function () {
     return {
+      audio:"",
       shared: store.state
     }
   },
   created: function () {
-    this.shared.title = "App-Handbuch";},
+    this.shared.title = "App-Handbuch";
+    this.playInstruction()},
+    
   methods: {
     getImgUrl: function (pic) {
       return require('@/assets/images/' + pic)
@@ -90,6 +93,14 @@ export default {
     },
     goToHome:function (){
       this.$router.push("/Home")
+    },
+    // the tutorial plays automatically on pageload
+    playInstruction:function (){
+      this.audio = new Audio(require('@/assets/sounds/Tutorial1.mp3'));
+      this.audio.play();
+    },
+    stopAudio:function (){
+      this.audio.pause();
     }
   }
 }

@@ -33,7 +33,7 @@
 
     <div>
       <v-row align-content="space-between">
-        <v-btn class="buttonProceed" v-on:click="navigate" color="green">
+        <v-btn class="buttonProceed" v-on:click="navigate(); stopAudio()" color="green">
           Zur Übungsauswahl
         </v-btn>
       </v-row>
@@ -67,17 +67,27 @@ export default {
   name: "Tutorial",
   data: function () {
     return {
+      audio:"",
       shared: store.state
     }
   },
   created: function () {
-    this.shared.title = "App-Handbuch";},
+    this.shared.title = "App-Handbuch";
+    this.playInstruction()},
   methods: {
     getImgUrl: function (pic) {
       return require('@/assets/images/' + pic)
     },
     navigate:function (){
         this.$router.push("/Home")
+    },
+    // the tutorial plays automatically on pageload
+    playInstruction:function (){
+      this.audio = new Audio(require('@/assets/sounds/Tutorial4.mp3'));
+      this.audio.play();
+    },
+    stopAudio:function (){
+      this.audio.pause();
     }
   }
 }

@@ -14,6 +14,7 @@
            Image for Patient Education
                If you click on the button the counter will be set to 1
                /-->
+               
           <v-row>
             <v-img
                 :src="getImgUrl('PatEd2.png')"

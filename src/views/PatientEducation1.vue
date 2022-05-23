@@ -22,16 +22,16 @@
                 width="auto"
                 contain
             />
-
-
+    
           </v-row>
           <p class="text">
             1. Übung beobachten
           </p>
+          
         </div>
         <v-spacer></v-spacer>
         <div v-if="counter>1">
-
+        
           <!--
           Images for Patient Education
           If you click on the button the counter will be set to 2
@@ -77,7 +77,7 @@
     </v-row>
     <div>
       <v-row align-content="space-between">
-      <v-btn class="buttonProceed" v-on:click="count" color="green">
+      <v-btn class="buttonProceed" v-on:click="count(); playInstruction()" color="green">
         Weiter
       </v-btn>
         <v-btn class="buttonSkip" v-on:click="goToHome" x-small>
@@ -127,6 +127,7 @@ export default {
   name: "patientEducation1",
   data: function () {
     return {
+      audio:"",
       counter:0,
       shared: store.state
     }
@@ -145,6 +146,16 @@ export default {
     },
     goToHome:function (){
       this.$router.push("/Home")
+    },
+    // plays the audio for patient education
+    playInstruction:function (){
+      if (this.counter==1){
+        this.audio = new Audio(require('@/assets/sounds/AO&MI.mp3'));
+        this.audio.play();
+      }
+      if (this.counter==4){
+        this.audio.pause();
+      }
     }
   }
 }
