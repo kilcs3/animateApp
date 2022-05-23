@@ -11,6 +11,7 @@
         <exercise-video
             :videoSource="exercise.video"
             :imgSource="exercise.image"
+            :audioSource="exercise.audio"
             @videoEnded="onVideoEnded(exercise)">
         </exercise-video>
         <p class="description">Beobachten Sie die gezeigte Übung.</p>
@@ -36,7 +37,8 @@
           mögliche Icons für next/back:
             mdi-menu-right
             mdi-menu-left
-          /--></nav-buttons>
+          /-->
+    </nav-buttons>
   </div>
 </template>
 
@@ -57,7 +59,7 @@ export default {
   },
   methods: {
     onVideoEnded: function (exercise) {
-      this.$router.push('/exerciseMI/' + exercise.id)
+      this.$router.push('/exerciseMI/' + exercise.id)//navigates to corresponding MI exercise after video ends
     }
   },
   components: {
