@@ -10,7 +10,15 @@ import Tutorial1 from "@/views/Tutorial1";
 import Tutorial2 from "@/views/Tutorial2";
 import Tutorial3 from "@/views/Tutorial3";
 import Tutorial4 from "@/views/Tutorial4";
-
+import QuestionnaireKVIQ from "@/views/QuestionnaireKVIQ";
+import QuestionnaireKVIQ2 from "@/views/QuestionnaireKVIQ2";
+import QuestionnaireKVIQ3 from "@/views/QuestionnaireKVIQ3";
+import ExerciseKVIQK from "@/views/ExerciseKVIQK";
+import ExerciseKVIQV from "@/views/ExerciseKVIQV";
+import KinestheticKVIQ from "@/views/KinestheticKVIQ";
+import VisualKVIQ from "@/views/VisualKVIQ";
+import EvalKVIQK from "@/views/EvalKVIQK";
+import EvalKVIQV from "@/views/EvalKVIQV";
 
 Vue.use(VueRouter)
 
@@ -65,7 +73,52 @@ const routes = [
     path: '/tutorial4/',
     name: 'tutorial4',
     component: Tutorial4
-  }
+  },
+  {
+    path: '/questionnaireKVIQ/',
+    name: 'questionnaireKVIQ',
+    component: QuestionnaireKVIQ
+  },
+  {
+    path: '/questionnaireKVIQ2/',
+    name: 'questionnaireKVIQ2',
+    component: QuestionnaireKVIQ2
+  },
+  {
+    path: '/questionnaireKVIQ3/',
+    name: 'questionnaireKVIQ3',
+    component: QuestionnaireKVIQ3
+  },
+  {
+    path: '/exerciseKVIQK/:id',
+    name: 'exerciseKVIQK',
+    component: ExerciseKVIQK
+  },
+  {
+    path: '/exerciseKVIQV/:id',
+    name: 'exerciseKVIQV',
+    component: ExerciseKVIQV
+  },
+  {
+    path: '/evalKVIQK/:id',
+    name: 'evalKVIQK',
+    component: EvalKVIQK
+  },
+  {
+    path: '/evalKVIQV/:id',
+    name: 'evalKVIQV',
+    component: EvalKVIQV
+  },
+  {
+    path: '/kinestheticKVIQ/',
+    name: 'kinestheticKVIQ',
+    component: KinestheticKVIQ
+  },
+  {
+    path: '/visualKVIQ/',
+    name: 'visualKVIQ',
+    component: VisualKVIQ
+  },
 
 ]
 

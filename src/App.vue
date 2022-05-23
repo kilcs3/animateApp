@@ -76,6 +76,12 @@
             </v-list-item-icon>
             <v-list-item-title>Übungstechnik</v-list-item-title>
           </v-list-item>
+          <v-list-item @click="toKVIQ">
+            <v-list-item-icon>
+              <v-icon>mdi-clipboard-text</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>KVIQ Fragebogen</v-list-item-title>
+          </v-list-item>
           <!-- Icons für mögliche weitere Menü-Punkte:
               Statistik: mdi-chart-line /-->
         </v-list-item-group>
@@ -104,10 +110,12 @@ import store from '@/store';
       },
       toTutorial: function(){
         this.$router.push("/tutorial1");
-      }
-      ,
+      },
       toEducation: function(){
         this.$router.push("/");
+      },
+      toKVIQ: function(){
+        this.$router.push("/questionnaireKVIQ");
       }
     },
   };
