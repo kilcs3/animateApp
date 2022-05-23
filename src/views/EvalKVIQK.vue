@@ -74,12 +74,6 @@
       'nav-buttons': NavigationButtons,
     },
     methods: {
-      submit: function(){
-        this.$router.push("/kinestheticKVIQ");
-      },
-      goBack: function (){
-        this.$router.push("/ExerciseKVIQK/" + this.kExercise.id)
-      },
       onChange(event) {
         var optionText = event.target.value;
         let data = [
