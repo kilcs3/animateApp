@@ -84,6 +84,7 @@
         ]
         console.log(JSON.stringify(data)); //ID & value as JSON string
       },
+      //Versuch Daten der Bewertung in JSON file zu speichern
       /*saveFile: function() {
         localStorage.setItem('storedData', JSON.stringify(this.data));
         
@@ -94,7 +95,7 @@
       this.shared.title = "Übung beendet";
       let kExercise = store.getters.kExercise(this.$route.params.id);
       if (!kExercise) {
-        this.$router.push("/questionnaireKVIQ3");
+        this.$router.push("/questionnaireKVIQ4");
         return;
       }
       this.kExercise = kExercise;

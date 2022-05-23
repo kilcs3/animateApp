@@ -86,7 +86,7 @@
       this.shared.title = "Übung beendet";
       let vExercise = store.getters.vExercise(this.$route.params.id);
       if (!vExercise) {
-        this.$router.push("/questionnaireKVIQ3");
+        this.$router.push("/questionnaireKVIQ4");
         return;
       }
       this.vExercise = vExercise;

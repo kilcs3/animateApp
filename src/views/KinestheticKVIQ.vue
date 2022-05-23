@@ -31,7 +31,7 @@
 
         methods:{
             goBack: function (){
-                this.$router.push("/questionnaireKVIQ3")
+                this.$router.push("/questionnaireKVIQ4")
             }
         }
     }

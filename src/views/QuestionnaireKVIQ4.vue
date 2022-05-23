@@ -2,10 +2,10 @@
     <div class="margin container">
         <v-row align="center">
             <v-col>
-                <p class="description"><b>Bitte wählen Sie Ihre dominante Seite</b></p>
+                <p class="description"><b>Bitte wählen Sie eine Kategorie</b></p>
                 <v-btn id="buttonBack" class="buttonBack" v-on:click="goBack()">Zurück</v-btn>
-                <v-btn large v-on:click="goLeft()">Links</v-btn>
-                <v-btn large v-on:click="goRight()">Rechts</v-btn>
+                <v-btn large v-on:click="goVisual()">Visuell</v-btn>
+                <v-btn large v-on:click="goKinesthetic()">Kinästhetisch</v-btn>
             </v-col>
         </v-row>
     </div>
@@ -14,7 +14,7 @@
 <script>
     import store from '@/store';
     export default {
-        name: "questionnaireKVIQ3",
+        name: "questionnaireKVIQ4",
         data: function(){
             return {
             shared: store.state,
@@ -25,14 +25,13 @@
 
         methods:{
             goBack: function (){
-                this.$router.push("/questionnaireKVIQ2")
+                this.$router.push("/questionnaireKVIQ3")
             },
-            goRight: function (){
-                this.$router.push("/questionnaireKVIQ4")
-                
+            goKinesthetic: function (){
+                this.$router.push("/kinestheticKVIQ")
             },
-            goLeft: function (){
-                this.$router.push("/questionnaireKVIQ4")
+            goVisual: function (){
+                this.$router.push("/visualKVIQ")
             },
         }
     }

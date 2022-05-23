@@ -41,6 +41,7 @@ const state3 = {
     title: "Übung auswählen"
 };
 
+
 function getExercise(id) {
     return state.exercises.find(exercise => exercise.id === Number(id));
 }

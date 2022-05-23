@@ -43,7 +43,7 @@
     
         let kExercise = store.getters.kExercise(this.$route.params.id);
         if (!kExercise) {
-            this.$router.push("/questionnaireKVIQ3");
+            this.$router.push("/questionnaireKVIQ4");
             return;
         }
     this.kExercise = kExercise;

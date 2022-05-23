@@ -13,6 +13,7 @@ import Tutorial4 from "@/views/Tutorial4";
 import QuestionnaireKVIQ from "@/views/QuestionnaireKVIQ";
 import QuestionnaireKVIQ2 from "@/views/QuestionnaireKVIQ2";
 import QuestionnaireKVIQ3 from "@/views/QuestionnaireKVIQ3";
+import QuestionnaireKVIQ4 from "@/views/QuestionnaireKVIQ4";
 import ExerciseKVIQK from "@/views/ExerciseKVIQK";
 import ExerciseKVIQV from "@/views/ExerciseKVIQV";
 import KinestheticKVIQ from "@/views/KinestheticKVIQ";
@@ -88,6 +89,11 @@ const routes = [
     path: '/questionnaireKVIQ3/',
     name: 'questionnaireKVIQ3',
     component: QuestionnaireKVIQ3
+  },
+  {
+    path: '/questionnaireKVIQ4/',
+    name: 'questionnaireKVIQ4',
+    component: QuestionnaireKVIQ4
   },
   {
     path: '/exerciseKVIQK/:id',
