@@ -4,8 +4,8 @@
             <v-col>
                 <p class="description"><b>Bitte wählen Sie Ihre dominante Seite</b></p>
                 <v-btn id="buttonBack" class="buttonBack" v-on:click="goBack()">Zurück</v-btn>
-                <v-btn value="left" large v-on:click="goLeft()">Links</v-btn>
-                <v-btn value="right" large v-on:click="goRight()">Rechts</v-btn>
+                <v-btn id="buttonLeft" value="left" large v-on:click="goLeft()">Links</v-btn>
+                <v-btn id="buttonRight" value="right" large v-on:click="goRight()">Rechts</v-btn>
             </v-col>
         </v-row>
     </div>
@@ -29,11 +29,11 @@
             },
             goRight: function (){
                 this.$router.push("/questionnaireKVIQ4")
-                //not implemented: write Button value to JSON file
+                //not implemented yet: save button value to localStorage
             },
             goLeft: function (){
                 this.$router.push("/questionnaireKVIQ4")
-                //not implemented: write Button value to JSON file
+                //not implemented yet: save button value to localStorage
             },
         }
     }
