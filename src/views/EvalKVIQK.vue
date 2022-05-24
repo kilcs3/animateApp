@@ -74,21 +74,20 @@
       'nav-buttons': NavigationButtons,
     },
     methods: {
-      onChange(event) {
+      onChange(event) {             //saves data to localstorage
         var optionText = event.target.value;
-        let data = [
-          {
+        let data = {
             id: this.kExercise.id,
             value: optionText
-          }
-        ]
-        console.log(JSON.stringify(data)); //ID & value as JSON string
-      },
-      //Versuch Daten der Bewertung in JSON file zu speichern
-      /*saveFile: function() {
-        localStorage.setItem('storedData', JSON.stringify(this.data));
+        };
+        let dataSerialized = JSON.stringify(data);
         
-      }*/
+        localStorage.setItem("evalData" + this.kExercise.id, dataSerialized);
+        
+        let dataDeserialized = JSON.parse(localStorage.getItem("evalData" + this.kExercise.id));
+
+        console.log(dataDeserialized); 
+      }
     },
     
     created: function() {

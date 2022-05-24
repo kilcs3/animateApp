@@ -71,16 +71,20 @@
       'nav-buttons': NavigationButtons,
     },
     methods: {
-      onChange(event) {
+      onChange(event) {             //saves data to localstorage
         var optionText = event.target.value;
-        let data = [
-          {
+        let data = {
             id: this.vExercise.id,
             value: optionText
-          }
-        ]
-        console.log(JSON.stringify(data));
-      },
+        };
+        let dataSerialized = JSON.stringify(data);
+        
+        localStorage.setItem("evalData" + this.vExercise.id, dataSerialized);
+        
+        let dataDeserialized = JSON.parse(localStorage.getItem("evalData" + this.vExercise.id));
+
+        console.log(dataDeserialized); 
+      }
     },
     created: function() {
       this.shared.title = "Übung beendet";
