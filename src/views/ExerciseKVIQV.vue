@@ -8,6 +8,7 @@
           :md="4"
           :lg="3"
       >
+      <exercise-image :imgSource="vExercise.image" :aspectRatio="1.23"></exercise-image>
       <p class="description"><b>Bitte führen Sie Punkt 1 bis 4 aus:</b></p>
       <p class="description" align="left" style="white-space: pre-line;">{{vExercise.description}}</p>
       </v-col>
@@ -28,6 +29,7 @@
 <script>
   import store from '@/store';
   import NavigationButtons from "@/components/NavigationButtons";
+  import ExerciseImage from "@/components/ExerciseImage";
   export default {
     name: "exerciseKVIQV",
     data: function(){
@@ -37,6 +39,7 @@
     },
     components: {
       'nav-buttons': NavigationButtons,
+      'exercise-image': ExerciseImage,
     },
     created: function() {
         this.shared.title = "Vorstellen";
