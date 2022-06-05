@@ -10,7 +10,9 @@
       >
       <exercise-image :imgSource="vExercise.image" :aspectRatio="1.23"></exercise-image>
       <p class="description"><b>Bitte führen Sie Punkt 1 bis 4 aus:</b></p>
+      <v-btn><v-icon>mdi-volume-high</v-icon></v-btn>
       <p class="description" align="left" style="white-space: pre-line;">{{vExercise.description}}</p>
+      
       </v-col>
       <v-spacer></v-spacer>
     </v-row>
