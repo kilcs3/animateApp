@@ -82,8 +82,13 @@
             </v-list-item-icon>
             <v-list-item-title>KVIQ Fragebogen</v-list-item-title>
           </v-list-item>
-          <!-- Icons für mögliche weitere Menü-Punkte:
-              Statistik: mdi-chart-line /-->
+          
+          <v-list-item @click="toEvaluation">
+            <v-list-item-icon>
+              <v-icon>mdi-chart-bar</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>Bewertungen</v-list-item-title>
+          </v-list-item>
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
@@ -116,6 +121,9 @@ import store from '@/store';
       },
       toKVIQ: function(){
         this.$router.push("/questionnaireKVIQ");
+      },
+      toEvaluation: function(){
+        this.$router.push("/evalOverview");
       }
     },
   };

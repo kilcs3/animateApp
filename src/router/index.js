@@ -20,6 +20,7 @@ import KinestheticKVIQ from "@/views/KinestheticKVIQ";
 import VisualKVIQ from "@/views/VisualKVIQ";
 import EvalKVIQK from "@/views/EvalKVIQK";
 import EvalKVIQV from "@/views/EvalKVIQV";
+import EvalOverview from "@/views/EvalOverview";
 
 Vue.use(VueRouter)
 
@@ -114,6 +115,11 @@ const routes = [
     path: '/evalKVIQV/:id',
     name: 'evalKVIQV',
     component: EvalKVIQV
+  },
+  {
+    path: '/evalOverview/',
+    name: 'evalOverview',
+    component: EvalOverview
   },
   {
     path: '/kinestheticKVIQ/',

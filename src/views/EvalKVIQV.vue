@@ -50,7 +50,7 @@
     <nav-buttons
       :backLink="'/exerciseKVIQV/' + vExercise.id"
       :backText="'Zurück zur Übung'"
-      :nextLink="'/visualKVIQ/'"
+      :nextLink="'/evalOverview/'"
       :nextText="'Bestätigen'"
       class="margin"
     ></nav-buttons>
@@ -72,7 +72,10 @@
     },
     methods: {
       onChange(event) {             //saves data to localstorage
-        var optionText = event.target.value;
+        var optionText = "N/A";
+        if (event.target.value!=null){
+          optionText = event.target.value;
+        }
         let data = {
             id: this.vExercise.id,
             value: optionText

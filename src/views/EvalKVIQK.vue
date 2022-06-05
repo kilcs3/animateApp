@@ -53,7 +53,7 @@
     <nav-buttons
       :backLink="'/exerciseKVIQK/' + kExercise.id"
       :backText="'Zurück zur Übung'"
-      :nextLink="'/kinestheticKVIQ/'"
+      :nextLink="'/evalOverview/'"
       :nextText="'Bestätigen'"
       class="margin"
     ></nav-buttons>
@@ -75,7 +75,10 @@
     },
     methods: {
       onChange(event) {             //saves data to localstorage
-        var optionText = event.target.value;
+        var optionText = 0;
+        if (event.target.value!=null){
+          optionText = event.target.value;
+        }
         let data = {
             id: this.kExercise.id,
             value: optionText
@@ -98,6 +101,7 @@
         return;
       }
       this.kExercise = kExercise;
+      
     }
   }
 </script>

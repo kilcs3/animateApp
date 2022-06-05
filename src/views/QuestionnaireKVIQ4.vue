@@ -29,11 +29,28 @@
             },
             goKinesthetic: function (){
                 this.$router.push("/kinestheticKVIQ")
+                
             },
             goVisual: function (){
                 this.$router.push("/visualKVIQ")
+                
             },
         }
+    }
+    //initializes default data
+    for (let i = 1; i < 18; i++){
+        let defaultData = {
+        id: "K" + i,
+        value: 0
+        }
+        localStorage.setItem("evalDataK" + i , JSON.stringify(defaultData));
+    }
+    for (let i = 1; i < 18; i++){
+        let defaultData = {
+        id: "V" + i,
+        value: 0
+        }
+        localStorage.setItem("evalDataV" + i , JSON.stringify(defaultData));
     }
 </script>
 
