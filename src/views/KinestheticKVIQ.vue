@@ -27,7 +27,9 @@
             }
         },
         created: function () {
-        this.shared.title = "KVIQ Fragebogen"}, //sets title to "KVIQ Fragebogen"
+        this.shared.title = "KVIQ Fragebogen"   //sets title to "KVIQ Fragebogen"
+
+        },
 
         methods:{
             goBack: function (){
