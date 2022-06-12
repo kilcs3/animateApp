@@ -10,7 +10,10 @@
       >
       <exercise-image :imgSource="vExercise.image" :aspectRatio="1.23"></exercise-image>
       <p class="description"><b>Bitte führen Sie Punkt 1 bis 4 aus:</b></p>
-      <v-btn @click="playAudio()"><v-icon>mdi-volume-high</v-icon></v-btn>
+      <v-btn @click="playAudio()">
+        <v-icon v-if="isPlaying">mdi-volume-high</v-icon>
+        <v-icon v-else>mdi-volume-off</v-icon>
+      </v-btn>
       <p class="description" align="left" style="white-space: pre-line;">{{vExercise.description}}</p>
       
       </v-col>
@@ -38,6 +41,7 @@
       return {
         shared: store.state2,
         counter: 0,
+        isPlaying: false,
       }
     },
     components: {
@@ -49,9 +53,11 @@
         if(this.counter == 0){
           this.audio = new Audio(require('@/assets/sounds/audioVisual/' + this.vExercise.audio));
           this.audio.play();
+          this.isPlaying = true;
           this.counter++;
         } else if(this.counter == 1){
           this.audio.pause();
+          this.isPlaying = false;
           this.counter = 0;
         }
       }
