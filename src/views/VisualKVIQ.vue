@@ -11,9 +11,9 @@
                 <router-link :to="'/exerciseKVIQV/'+ vExercise.id">
                     <p class="description" align="left">{{vExercise.title}}</p>
                 </router-link>
-                <v-btn id="buttonBack" class="back" v-on:click="goBack()">Zurück</v-btn>
             </v-col>
         </v-row>
+        <v-btn id="buttonBack" class="back" v-on:click="goBack()">Zurück</v-btn>
     </div>
 </template>
 
@@ -44,6 +44,6 @@
 .back{
   position: absolute;
   left: 30px;
-  bottom: 0;
+  bottom: 0px;
 }
 </style>
