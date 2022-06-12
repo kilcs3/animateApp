@@ -3,7 +3,7 @@
         <v-row align="center">
             <v-col>
                 <p class="description"><b>Bitte wählen Sie Ihre dominante Seite</b></p>
-                <v-btn id="buttonBack" class="buttonBack" v-on:click="goBack()">Zurück</v-btn>
+                <v-btn id="buttonBack" class="back" v-on:click="goBack()">Zurück</v-btn>
                 <v-btn id="buttonLeft" value="left" large v-on:click="goLeft()">Links</v-btn>
                 <v-btn id="buttonRight" value="right" large v-on:click="goRight()">Rechts</v-btn>
             </v-col>
@@ -44,7 +44,7 @@
   height: 87vh;
   position: relative;
 }
-.buttonBack{
+.back{
   position: absolute;
   left: 30px;
   bottom: 0;

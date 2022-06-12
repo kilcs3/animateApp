@@ -10,7 +10,7 @@
       >
       <exercise-image :imgSource="kExercise.image" :aspectRatio="1.23"></exercise-image>
       <p class="description"><b>Bitte führen Sie Punkt 1 bis 4 aus:</b></p>
-      <v-btn><v-icon>mdi-volume-high</v-icon></v-btn>
+      <v-btn @click="playAudio()"><v-icon>mdi-volume-high</v-icon></v-btn>
       <p class="description" align="left" style="white-space: pre-line;">{{kExercise.description}}</p>
       
       </v-col>
@@ -37,14 +37,27 @@
     data: function(){
       return {
         shared: store.state2,
+        counter: 0,
       }
     },
     components: {
       'nav-buttons': NavigationButtons,
       'exercise-image': ExerciseImage,
     },
+    methods: {
+      playAudio: function(){
+        if(this.counter == 0){
+          this.audio = new Audio(require('@/assets/sounds/audioKinesthetic/' + this.kExercise.audio));
+          this.audio.play();
+          this.counter++;
+        } else if(this.counter == 1){
+          this.audio.pause();
+          this.counter = 0;
+        }
+      }
+    },
     created: function() {
-        this.shared.title = "Vorstellen";
+        this.shared.title = "KVIQ Fragebogen";
     
         let kExercise = store.getters.kExercise(this.$route.params.id);
         if (!kExercise) {

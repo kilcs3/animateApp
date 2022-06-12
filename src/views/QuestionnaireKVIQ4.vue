@@ -3,7 +3,7 @@
         <v-row align="center">
             <v-col>
                 <p class="description"><b>Bitte wählen Sie eine Kategorie</b></p>
-                <v-btn id="buttonBack" class="buttonBack" v-on:click="goBack()">Zurück</v-btn>
+                <v-btn id="buttonBack" class="back" v-on:click="goBack()">Zurück</v-btn>
                 <v-btn large v-on:click="goVisual()">Visuell</v-btn>
                 <v-btn large v-on:click="goKinesthetic()">Kinästhetisch</v-btn>
             </v-col>
@@ -59,7 +59,7 @@
   height: 87vh;
   position: relative;
 }
-.buttonBack{
+.back{
   position: absolute;
   left: 30px;
   bottom: 0;

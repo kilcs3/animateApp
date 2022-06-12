@@ -10,7 +10,7 @@
       >
         <exercise-image :imgSource="exercise.imageFinished" :aspectRatio="1.5"></exercise-image>
         <p class="description">Sie haben die &Uuml;bung erfolgreich beendet!</p>
-        <fieldset class="bewertung">
+        <!--<fieldset class="bewertung">
           <legend><b>Bewerten Sie Ihr visuelles Vorstellungsvermögen</b></legend>
 
           <div align="left" style="margin-top:15px">
@@ -33,7 +33,7 @@
             <input type="radio" id="option5" name="Vorstellungsvermögen" value="5">
             <label for="option5" style="margin-left: 10px">Bild so klar wie beim Sehen</label>
           </div>
-        </fieldset>
+        </fieldset>-->
       </v-col>
       <v-spacer></v-spacer>
     </v-row>

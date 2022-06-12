@@ -11,7 +11,7 @@
                 <router-link :to="'/exerciseKVIQK/'+ kExercise.id">
                     <p class="description" align="left">{{kExercise.title}}</p>
                 </router-link>
-                <v-btn id="buttonBack" class="buttonBack" v-on:click="goBack()">Zurück</v-btn>
+                <v-btn id="buttonBack" class="back" v-on:click="goBack()">Zurück</v-btn>
             </v-col>
         </v-row>
     </div>
@@ -43,7 +43,7 @@
   height: 87vh;
   position: relative;
 }
-.buttonBack{
+.back{
   position: absolute;
   left: 30px;
   bottom: 0;

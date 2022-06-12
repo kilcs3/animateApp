@@ -7,8 +7,8 @@
                 :md="4"
                 :lg="3"
             >
-                <v-btn id="buttonProceed" class="buttonProceed" color="green" v-on:click="navigate()">Weiter</v-btn>
-                <v-btn id="buttonBack" class="buttonBack" v-on:click="goToHome()">Zurück</v-btn>
+                <v-btn id="buttonProceed" class="proceed" v-on:click="navigate()">Weiter</v-btn>
+                <v-btn id="buttonBack" class="back" v-on:click="goToHome()">Zurück</v-btn>
             </v-col>
         </v-row>
         <p class="text">
@@ -53,12 +53,12 @@
   height: 87vh;
   position: relative;
 }
-.buttonProceed{
+.proceed{
   position: absolute;
   right: 30px;
   bottom: 0;
 }
-.buttonBack{
+.back{
   position: absolute;
   left: 30px;
   bottom: 0;
