@@ -11,7 +11,6 @@
           <v-icon left>mdi-content-save</v-icon>
           Speichern
         </v-btn>
-        <v-btn id="buttonProceed" class="buttonProceed" v-on:click="$router.go(-3)">Weiter</v-btn>
         <v-btn id="buttonBack" class="buttonBack" v-on:click="$router.go(-1)">Zurück</v-btn>
       </v-col>
       <v-spacer></v-spacer>

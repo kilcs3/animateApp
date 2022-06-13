@@ -123,7 +123,7 @@ import store from '@/store';
         this.$router.push("/questionnaireKVIQ");
       },
       toEvaluation: function(){
-        this.$router.push("/evalOverview");
+        this.$router.push("/KVIQResult");
       }
     },
   };
