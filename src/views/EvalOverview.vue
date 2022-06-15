@@ -5,8 +5,8 @@
       <v-spacer></v-spacer>
       <v-col>
         <p class="description">Hier sehen Sie Ihre Bewertungen.</p>
-        <canvas id="evalChartV"></canvas>
-        <canvas id="evalChartK"></canvas>
+        <canvas id="evalChartV" height="200px"></canvas>
+        <canvas id="evalChartK" height="200px"></canvas>
         <v-btn id="download" class="download" @click="download()">
           <v-icon left>mdi-content-save</v-icon>
           Speichern
@@ -151,7 +151,7 @@
     },
 
     created: function() {
-      this.shared.title = "Statistik";
+      this.shared.title = "KVIQ Fragebogen";
     }
   }
   

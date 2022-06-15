@@ -44,6 +44,6 @@
 .back{
   position: absolute;
   left: 30px;
-  bottom: 0px;
+  vertical-align: bottom;
 }
 </style>
