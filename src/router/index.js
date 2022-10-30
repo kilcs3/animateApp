@@ -22,6 +22,8 @@ import EvalKVIQK from "@/views/EvalKVIQK";
 import EvalKVIQV from "@/views/EvalKVIQV";
 import EvalOverview from "@/views/EvalOverview";
 import KVIQResult from "@/views/KVIQResult";
+import Ziele from "@/views/Ziele";
+
 
 Vue.use(VueRouter)
 
@@ -127,6 +129,12 @@ const routes = [
     name: 'KVIQResult',
     component: KVIQResult
   },
+  {
+    path:'/Ziele/',
+    name: 'Ziele',
+    component: Ziele
+  },
+
   {
     path: '/kinestheticKVIQ/',
     name: 'kinestheticKVIQ',

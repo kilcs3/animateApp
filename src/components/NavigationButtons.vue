@@ -6,7 +6,7 @@
           :cols="12"
           :md="6"
       >
-        <v-btn
+     <v-btn
             x-large
             width="90mm"
             @click="back"

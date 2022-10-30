@@ -56,7 +56,14 @@ const state3 = {
     ],
     title: "Übung auswählen"
 };
-
+const state4 = {
+    gziele: [
+        {id:"Hauptziel",messageH: " " },
+        {id:"Zwischenziel1", messageZ1: " "},
+        {id:"Zwischenziel2", messageZ2: " "},
+        {id:"Zwischenziel3", messageZ3: " "}
+    ]
+}
 
 function getExercise(id) {
     return state.exercises.find(exercise => exercise.id === Number(id));
@@ -67,14 +74,19 @@ function getExerciseK(id) {
 function getExerciseV(id) {
     return state3.vExercises.find(vExercise => vExercise.id === String(id));
 }
+function getZiele(id) {
+    return state4.gziele.find(gziele => gziele.id === String(id), gziele=> gziele.name === String(name));
+}
 
 export default {
     state: state,
     state2: state2,
     state3: state3,
+    state4: state4,
     getters: {
         exercise: getExercise,
         kExercise: getExerciseK,
         vExercise: getExerciseV,
-    }
-}
+        gziele: getZiele
+    } };
+

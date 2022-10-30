@@ -14,6 +14,7 @@
         </router-link>
       </v-col>
     </v-row>
+
   </div>
 </template>
 
@@ -24,13 +25,17 @@
   export default {
     name: "Home",
     data: function(){
+
+
       return {
         shared: store.state
       }
     },
     components : {
       'exercise-image': ExerciseImage
+
     },
+
     created: function() {
       this.shared.title = "Übung auswählen";
     }

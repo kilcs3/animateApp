@@ -89,6 +89,17 @@
             </v-list-item-icon>
             <v-list-item-title>Bewertungen</v-list-item-title>
           </v-list-item>
+          <v-list-item @click="toZiele">
+            <v-list-item-icon>
+              <v-icon>
+
+                <!-- other icons that maybe fit better:
+                  mdi-map
+                /-->
+              </v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>Ziele</v-list-item-title>
+          </v-list-item>
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
@@ -103,6 +114,8 @@ import store from '@/store';
 
   export default {
     name: 'App',
+    components: {},
+
     data: function() {
       return {
         drawer: false,
@@ -124,7 +137,10 @@ import store from '@/store';
       },
       toEvaluation: function(){
         this.$router.push("/KVIQResult");
-      }
+      },
+      toZiele: function(){
+        this.$router.push("/Ziele");
+      },
     },
   };
 </script>
