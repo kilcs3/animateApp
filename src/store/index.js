@@ -58,10 +58,10 @@ const state3 = {
 };
 const state4 = {
     gziele: [
-        {id:"Hauptziel",messageH: " " },
-        {id:"Zwischenziel1", messageZ1: " "},
-        {id:"Zwischenziel2", messageZ2: " "},
-        {id:"Zwischenziel3", messageZ3: " "}
+        {id:"Hauptziel", message: " " },
+        {id:"Zwischenziel1", message: " "},
+        {id:"Zwischenziel2", message: " "},
+        {id:"Zwischenziel3", message: " "}
     ]
 }
 

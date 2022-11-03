@@ -1,0 +1,7 @@
+{
+  "name": "animateApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}

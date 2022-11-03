@@ -23,6 +23,6 @@ pnpm-debug.log*
 *.sw?
 
 # Cordova
-/animateApp/platforms
-/animateApp/plugins
+/src-cordova/platforms
+/src-cordova/plugins
 /public/cordova.js

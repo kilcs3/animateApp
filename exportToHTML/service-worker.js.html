@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>service-worker.js</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #629755; font-style: italic;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #cc7832;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+service-worker.js</font>
+</center></td></tr></table>
+<pre><span class="s0">/**</span>
+ <span class="s0">* Welcome to your Workbox-powered service worker!</span>
+ <span class="s0">*</span>
+ <span class="s0">* You'll need to register this file in your web app and you should</span>
+ <span class="s0">* disable HTTP caching for this file too.</span>
+ <span class="s0">* See https://goo.gl/nhQhGp</span>
+ <span class="s0">*</span>
+ <span class="s0">* The rest of the code is auto-generated. Please don't update this file</span>
+ <span class="s0">* directly; instead, make changes to your Workbox build configuration</span>
+ <span class="s0">* and re-run your build process.</span>
+ <span class="s0">* See https://goo.gl/2aRDsh</span>
+ <span class="s0">*/</span>
+
+<span class="s1">importScripts(</span><span class="s2">&quot;https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js&quot;</span><span class="s1">)</span><span class="s3">;</span>
+
+<span class="s1">importScripts(</span>
+  <span class="s2">&quot;precache-manifest.34704e5b0b3e85317e5e0b906293a7dc.js&quot;</span>
+<span class="s1">)</span><span class="s3">;</span>
+
+<span class="s1">workbox.core.setCacheNameDetails({prefix: </span><span class="s2">&quot;animate-sourcecode&quot;</span><span class="s1">})</span><span class="s3">;</span>
+
+<span class="s1">self.addEventListener(</span><span class="s2">'message'</span><span class="s3">, </span><span class="s1">(event) =&gt; {</span>
+  <span class="s3">if </span><span class="s1">(event.data &amp;&amp; event.data.type === </span><span class="s2">'SKIP_WAITING'</span><span class="s1">) {</span>
+    <span class="s1">self.skipWaiting()</span><span class="s3">;</span>
+  <span class="s1">}</span>
+<span class="s1">})</span><span class="s3">;</span>
+
+<span class="s0">/**</span>
+ <span class="s0">* The workboxSW.precacheAndRoute() method efficiently caches and responds to</span>
+ <span class="s0">* requests for URLs in the manifest.</span>
+ <span class="s0">* See https://goo.gl/S9QRab</span>
+ <span class="s0">*/</span>
+<span class="s1">self.__precacheManifest = [].concat(self.__precacheManifest || [])</span><span class="s3">;</span>
+<span class="s1">workbox.precaching.precacheAndRoute(self.__precacheManifest</span><span class="s3">, </span><span class="s1">{})</span><span class="s3">;</span>
+</pre>
+</body>
+</html>
