@@ -1,0 +1,6 @@
+{
+  "appId": "com.example.app",
+  "appName": "animate-sourcecode",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}
